@@ -58,7 +58,7 @@
     }
 }
 
-/* ============ Small Queries (Small Devices) ============ */
+/* ============ Media Queries (Small Devices) ============ */
 @media screen and (max-width: 600px) {
     .experience__container {
         gap: 1rem;
