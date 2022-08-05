@@ -42,9 +42,7 @@ const About = () => {
                     </div>
 
                     <p>
-                        sample sample sample sample sample sample sample sample sample
-                        sample sample sample sample sample sample sample sample sample
-                        sample sample sample sample sample sample sample sample sample
+                    I've spent the past two years studying computer engineering and doing several projects and labs in the college, some of which seem to be matched the role you find. So, I won't need much extra time to learn the ins and outs of the industry.
                     </p>
 
                     <a href="#contact" className='btn btn-primary'>Let's Talk</a>
