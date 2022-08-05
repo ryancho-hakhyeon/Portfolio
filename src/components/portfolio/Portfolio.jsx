@@ -56,12 +56,12 @@ const Portfolio = () => {
             return (
               <article key={id} className='portfolio__item'>
                 <div className="portfolio__item-image">
-                  <img src={imgae} alt={title} />
+                  <img src={image} alt={title} />
                 </div>
                 <h3>{title}</h3>
                   <div className="portfolio__item-cta">
-                    <a href={github} className='btn' target='_blank'>Github</a>
-                    <a href={demo} className='btn-primary' target='_blank'>Live Demo</a>
+                    <a href={github} className='btn' rel="noopener noreferrer" target='_blank'>Github</a>
+                    <a href={demo} className='btn-primary' rel="noopener noreferrer" target='_blank'>Live Demo</a>
                   </div>
               </article>
             )

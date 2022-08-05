@@ -1,9 +1,8 @@
-import React from 'react'
-import './contact.css'
-import {MdOutlineEmail} from 'react-icons/md'
-import {RiMessengerLine} from 'react-icons/ri'
 import React, { useRef } from 'react';
-import emailjs from '@emailjs-com';
+import './contact.css'
+import { MdOutlineEmail } from 'react-icons/md'
+import { RiMessengerLine } from 'react-icons/ri'
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const form = useRef();
@@ -26,19 +25,19 @@ const Contact = () => {
             <MdOutlineEmail className='contact__option-icon'/>
             <h4>Email</h4>
             <h5>ryancho.hakhyeon@gmail.com</h5>
-            <a href="mailto:ryancho.hakhyeon@gmail.com" target="_blank">Send a Message</a>
+            <a href="mailto:ryancho.hakhyeon@gmail.com" rel="noopener noreferrer" target="_blank">Send a Message</a>
           </article>
           <article className='contact__option'>
             <RiMessengerLine className='contact__option-icon'/>
             <h4>LinkedIn</h4>
             <h5>Ryan Hakhyeon Cho</h5>
-            <a href="https://www.linkedin.com/in/ryan-hakhyeon-cho-9832a019b/" target="_blank">Send a Message</a>
+            <a href="https://www.linkedin.com/in/ryan-hakhyeon-cho-9832a019b/" rel="noopener noreferrer" target="_blank">Send a Message</a>
           </article>
           <article className='contact__option'>
             <RiMessengerLine className='contact__option-icon'/>
             <h4>Indeed</h4>
             <h5>Ryan Hakhyeon Cho</h5>
-            <a href="" target="_blank">Sample</a>
+            <a href="/#" target="_blank">Sample</a>
           </article>
         </div>
 
@@ -47,7 +46,7 @@ const Contact = () => {
           <input type="email" name='email' placeholder='Your Email' required />
           <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
 
-          <button type='submit' className='btn btn-primary'> Send Message</button>
+          <button type='submit' className='btn btn-primary'>Send Message</button>
         </form>
       </div>
     </section >
