@@ -1,6 +1,39 @@
 import React from 'react'
 import './experience.css'
-import {BsPatchCheckFill} from 'react-icons/bs'
+
+import { SiCheckmarx } from 'react-icons/si'
+
+// import Swiper core and required modules
+import { Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+// Import Swiper styles
+import 'swiper/swiper.min.css';
+import 'swiper/modules/pagination/pagination.min.css'
+
+const data = [
+  {
+    title: 'BCIT ISSP Projects',
+    review: 'sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample'
+  },
+  {
+    title: 'BCIT Personal Projects - Provisioning',
+    review: 'sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample'
+  },
+  {
+    title: 'BCIT Personal Projects - Data Analysis',
+    review: 'sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample'
+  },
+  {
+    title: 'Code Challeges',
+    review: 'sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample'
+  },
+  {
+    title: 'Personal Projects',
+    review: 'sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample'
+  }
+]
+
 
 const Experience = () => {
   return (
@@ -8,89 +41,26 @@ const Experience = () => {
       <h5>What I Have Done</h5>
       <h2>My Experience</h2>
 
-      <div className='container experience__container'>
-        <div className='experienced__frontend'>
-          <h3>Frontend Development</h3>
-          <div className='experience__content'>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon'/>
-              <div>
-                <h4>HTML/CSS</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon'/>
-              <div>
-                <h4>JavaScript</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon'/>
-              <div>
-                <h4>React</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon'/>
-              <div>
-                <h4>Sample</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon'/>
-              <div>
-                <h4>Sample</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <div className='experienced__backend'>
-          <h3>Backend Development</h3>
-          <div className='experience__content'>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon'/>
-              <div>
-                <h4>Node JS</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon'/>
-              <div>
-                <h4>MongoDB</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon'/>
-              <div>
-                <h4>Python</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon'/>
-              <div>
-                <h4>MySQL</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon'/>
-              <div>
-                <h4>Sample</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
+      <Swiper className='container experience__container'
+            modules={[Pagination]}
+            spaceBetween={40}
+            slidesPerView={1}
+            
+            pagination={{ clickable: true }}>
+        {
+          data.map(({title, review}, index) => {
+            return (
+              <SwiperSlide key={index} className='experiences'>              
+                <SiCheckmarx className='experience__detail-icon'/>
+                <div className='experience__title'>
+                  <h3>{title}</h3>
+                </div>
+                <small className='experience__review'>{review}</small>
+            </SwiperSlide>
+            )
+          })
+        }
+      </Swiper>
     </section>
   )
 }

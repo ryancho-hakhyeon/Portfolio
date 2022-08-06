@@ -17,11 +17,11 @@ const Footer = () => {
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <div className="footer__socials">
+      {/* <div className="footer__socials">
         <a href="/#"></a>
         <a href="/#"></a>
         <a href="/#"></a>
-      </div>
+      </div> */}
 
       <div className="footer__copyright">
         <small>&copy; RyanCho Tutorials. All rights reserved.</small>

@@ -1,101 +1,129 @@
 import React from 'react'
 import './services.css'
-import { BiCheck } from 'react-icons/bi'
+import { BsPatchCheckFill } from 'react-icons/bs'
 
 const Services = () => {
   return (
     <section id='services'>
       <h5>What Skills I Have</h5>
-      <h2>Services</h2>
+      <h2>All Ability</h2>
       <div className='container services__container'>
         <article className='service'>
           <div className='service__head'>
-            <h3>UI/UX Design</h3>
+            <h3>Basic Language</h3>
           </div>
-
-          <ul className='service__list'>
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>
-
-          </ul>
+          
+          <div className='service__list'>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>Python</h3>
+                <small className='text-light'>Expert</small>
+              </div>
+            </article>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>JavaScript</h3>
+                <small className='text-light'>Expert</small>
+              </div>
+            </article>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>HTML/CSS</h3>
+                <small className='text-light'>Expert</small>
+              </div>
+            </article>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>SQL</h3>
+                <small className='text-light'>Expert</small>
+              </div>
+            </article>
+          </div>
         </article>
 
         <article className='service'>
           <div className='service__head'>
-            <h3>Web Development</h3>
+            <h3>Development Tools</h3>
           </div>
 
-          <ul className='service__list'>
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>
-
-          </ul>
+          <div className='service__list'>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>React</h3>
+                <small className='text-light'>Intermediate</small>
+              </div>
+            </article>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>Angular</h3>
+                <small className='text-light'>Intermediate</small>
+              </div>
+            </article>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>Node.js</h3>
+                <small className='text-light'>Intermediate</small>
+              </div>
+            </article>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>MySQL</h3>
+                <small className='text-light'>Expert</small>
+              </div>
+            </article>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>MongoDB</h3>
+                <small className='text-light'>Intermediate</small>
+              </div>
+            </article>
+          </div>
         </article>
 
         <article className='service'>
           <div className='service__head'>
-            <h3>Content Creation</h3>
+            <h3>Other Tools</h3>
           </div>
 
-          <ul className='service__list'>
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>            
-            <li>
-              <BiCheck className='service__list-icon'/>
-              <p>sample, sample, sample, sample, sample, sample.</p>
-            </li>
-
-          </ul>
+          <div className='service__list'>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>Docker</h3>
+                <small className='text-light'>Intermediate</small>
+              </div>
+            </article>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>Ansible</h3>
+                <small className='text-light'>Intermediate</small>
+              </div>
+            </article>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>AWS / Azure</h3>
+                <small className='text-light'>Intermediate</small>
+              </div>
+            </article>
+            <article className='skills_list'>
+              <BsPatchCheckFill className='service__list-icon'/>
+              <div>
+                <h3>Github</h3>
+                <small className='text-light'>Expert</small>
+              </div>
+            </article>
+          </div>
         </article>
       </div>
     </section>
