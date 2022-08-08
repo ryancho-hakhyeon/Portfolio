@@ -37,7 +37,7 @@ const Contact = () => {
             <RiMessengerLine className='contact__option-icon'/>
             <h4>WhatsApp</h4>
             <h5>+16043498194</h5>
-            <a href="https://api.whatsapp.com/send?phone=+16043498194" target="_blank">Send a Message</a>
+            <a href="https://api.whatsapp.com/send?phone=+16043498194" rel="noopener noreferrer" target="_blank">Send a Message</a>
           </article>
         </div>
 
