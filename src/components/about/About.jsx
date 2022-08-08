@@ -24,25 +24,29 @@ const About = () => {
                     <div className="about__cards">
                         <article className='about__card'>
                             <FaAward className='about__icon'/>
-                            <h5>Experience</h5>
-                            <small>BCIT College</small>
+                            <h5>Bachelors / Diploma</h5>
+                            <small>SeMyung University / BCIT College</small>
                         </article>
 
                         <article className='about__card'>
                             <FiUser className='about__icon'/>
-                            <h5>Sample</h5>
-                            <small>BCIT College Projects</small>
+                            <h5>Certificates</h5>
+                            <small>freeCodeCamp</small>
                         </article>
 
                         <article className='about__card'>
                             <VscFolderLibrary className='about__icon'/>
                             <h5>Projects</h5>
-                            <small>BCIT College Projects</small>
+                            <small>College Projects / Personal Projects</small>
                         </article>
                     </div>
 
                     <p>
-                    I've spent the past two years studying computer engineering and doing several projects and labs in the college, some of which seem to be matched the role you find. So, I won't need much extra time to learn the ins and outs of the industry.
+                    I've spent the past two years studying computer engineering 
+                    and doing several projects and labs in the college, 
+                    some of which seem to be matched the role you find. 
+                    So, I won't need much extra time to learn the ins and outs 
+                    of the industry.
                     </p>
 
                     <a href="#contact" className='btn btn-primary'>Let's Talk</a>
