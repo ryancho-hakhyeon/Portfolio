@@ -25,7 +25,7 @@ const About = () => {
                         <article className='about__card'>
                             <FaAward className='about__icon'/>
                             <h5>Education</h5>
-                            <small>SeMyung University - Bachelors 2012</small>
+                            <small>SeMyung University - Bachelors 2012 / </small>
                             <small>BCIT College - Diploma 2021</small>
                         </article>
 
@@ -44,9 +44,13 @@ const About = () => {
                     </div>
 
                     <p>
-                    I am a type of person who is a passionate, strong mover, and enjoys the new challenge. I am enjoying problem solving, so I am convinced that if I do not do anything there is nothing happend.
-                    As a Junior developer, I've spent the past 2 years studying computer development. I'll not need much time to learn the ins and outs of the industry.
+                    I am a type of person who is a passionate, strong mover, and enjoys the new challenge. </p>
+                    <p> I am enjoying problem solving, so I am convinced that if I do not do anything there is nothing happend. </p>
+                    <p>
+                    With the past 2 years studying computer development, I'll not need much time to learn the ins and outs of the industry.
                     </p>
+
+                    <p></p>
 
                     <a href="#contact" className='btn btn-primary'>Let's Talk</a>
                 </div>

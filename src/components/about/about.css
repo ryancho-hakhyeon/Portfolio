@@ -57,16 +57,16 @@
 }
 
 .about__card h5 {
-    font-size: 0.95rem;
+    font-size: 1.27rem;
 }
 
 .about__card small {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: val(--color-light);
 }
 
 .about__content p {
-    margin: 2rem 0 2.6rem;
+    margin: 2rem 0 0.5rem;
     color: var(--color-light);
 }
 

@@ -1,10 +1,10 @@
 .container.experience__container {
-    width: 65%;
+    width: 55%;
 }
 
 .experiences {
     background: var(--color-bg-variant);
-    text-align: center;
+    text-align: left;
     padding: 2rem;
     border-radius: 2rem;
     user-select: none;
@@ -13,15 +13,16 @@
 
 .experience__title {
     text-align: left;
-    width: 40%;
+    width: 35%;
     margin: 0 0 0.8rem 0.8rem;
 }
 
 .experience__review{
     color: var(--color-light);
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 15px;
     display: block;
-    width: 80%;
+    width: 70%;
     margin: 0 auto 0;
 }
 
