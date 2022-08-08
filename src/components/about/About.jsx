@@ -24,29 +24,28 @@ const About = () => {
                     <div className="about__cards">
                         <article className='about__card'>
                             <FaAward className='about__icon'/>
-                            <h5>Bachelors / Diploma</h5>
-                            <small>SeMyung University / BCIT College</small>
+                            <h5>Education</h5>
+                            <small>SeMyung University - Bachelors 2012</small>
+                            <small>BCIT College - Diploma 2021</small>
                         </article>
 
                         <article className='about__card'>
                             <FiUser className='about__icon'/>
                             <h5>Certificates</h5>
-                            <small>freeCodeCamp</small>
+                            <small>freeCodeCamp 2022</small>
                         </article>
 
                         <article className='about__card'>
                             <VscFolderLibrary className='about__icon'/>
                             <h5>Projects</h5>
-                            <small>College Projects / Personal Projects</small>
+                            <small>College Projects 2021</small>
+                            <small>Personal Projects 2022</small>
                         </article>
                     </div>
 
                     <p>
-                    I've spent the past two years studying computer engineering 
-                    and doing several projects and labs in the college, 
-                    some of which seem to be matched the role you find. 
-                    So, I won't need much extra time to learn the ins and outs 
-                    of the industry.
+                    I am a type of person who is a passionate, strong mover, and enjoys the new challenge. I am enjoying problem solving, so I am convinced that if I do not do anything there is nothing happend.
+                    As a Junior developer, I've spent the past 2 years studying computer development. I'll not need much time to learn the ins and outs of the industry.
                     </p>
 
                     <a href="#contact" className='btn btn-primary'>Let's Talk</a>

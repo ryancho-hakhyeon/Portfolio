@@ -18,7 +18,7 @@ const data = [
   },
   {
     title: 'BCIT Personal Projects - Provisioning & CI/CD',
-    review: 'This project mostly focused on how to process between backend, frontend, and database services.'
+    review: 'This project mostly focused on how to process between backend, frontend, and database services. The various development tools were used for different purposes like Python and Node.js for the backend, Angular and React for the frontend, MongoDB and MySQL for the database, and Ansible, Docker, and AWS / Azure for the deployment.'
   },
   {
     title: 'BCIT Personal Projects - Data Analysis',
@@ -30,7 +30,7 @@ const data = [
   },
   {
     title: 'Personal Projects',
-    review: ''
+    review: 'I have been doing various personal projects since I graduated from BCIT college. It is able to check every project on Github. Most projects are built by JavaScript and Python programming languages, and I do both types of development like Web-based and App development. Moreover, the tools I use are below the skills section or described in the README.md file in each Github repository. '
   }
 ]
 

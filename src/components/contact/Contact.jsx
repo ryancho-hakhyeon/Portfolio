@@ -29,15 +29,15 @@ const Contact = () => {
           </article>
           <article className='contact__option'>
             <RiMessengerLine className='contact__option-icon'/>
-            <h4>LinkedIn</h4>
-            <h5>Ryan Hakhyeon Cho</h5>
-            <a href="https://www.linkedin.com/in/ryan-hakhyeon-cho-9832a019b/" rel="noopener noreferrer" target="_blank">Send a Message</a>
+            <h4>Discord</h4>
+            <h5>RyanCho#9397</h5>
+            <a href="https://discordapp.com/channels/@me/9397/" rel="noopener noreferrer" target="_blank">Send a Message</a>
           </article>
           <article className='contact__option'>
             <RiMessengerLine className='contact__option-icon'/>
             <h4>WhatsApp</h4>
-            <h5> </h5>
-            <a href="/#" target="_blank">Send a Message</a>
+            <h5>+16043498194</h5>
+            <a href="https://api.whatsapp.com/send?phone=+16043498194" target="_blank">Send a Message</a>
           </article>
         </div>
 
