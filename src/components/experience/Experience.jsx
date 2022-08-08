@@ -14,7 +14,7 @@ import 'swiper/modules/pagination/pagination.min.css'
 const data = [
   {
     title: 'BCIT ISSP Projects',
-    review: 'During the BCIT program, there were 2 biggest projects called ISSP. Although these projects were implemented as non-official work, I would say the composition of the project was very similar to industry work.' + `\n` + 'During 15 weeks with real clients, supervisors, and teammates, it was discussed technical opinions, demands, and possible results, and all those projects experiences were under the Agile methodology. I mostly took a part in catching errors and shaping data format. Also, I supported team mates to develop software in order to move next stage of development.'
+    review: 'During the BCIT program, there were 2 biggest projects called ISSP. Although these projects were implemented as non-official work, I would say the composition of the project was very similar to industry work. During 15 weeks with real clients, supervisors, and teammates, it was discussed technical opinions, demands, and possible results, and all those projects experiences were under the Agile methodology. I mostly took a part in catching errors and shaping data format. Also, I supported team mates to develop software in order to move next stage of development.'
   },
   {
     title: 'BCIT Personal Projects - Provisioning & CI/CD',
