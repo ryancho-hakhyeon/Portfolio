@@ -53,15 +53,16 @@
 .about__icon {
     color: var(--color-primary);
     font-size: 1.4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .about__card h5 {
     font-size: 1.27rem;
+    margin-bottom: 0.5rem;
 }
 
-.about__card small {
-    font-size: 0.9rem;
+.about__card ul {
+    font-size: 0.8rem;
     color: val(--color-light);
 }
 
@@ -74,11 +75,11 @@
 @media screen and (max-width: 1024px) {
     .about__container {
         grid-template-columns: 1fr;
-        gap: 0;
+        gap: 2rem;
     }
 
     .about__me {
-        width: 50%;
+        width: 45%;
         margin: 2rem auto 4rem;
     }
 
@@ -90,7 +91,7 @@
 /* ============ Media Queries (Small Devices) ============ */
 @media screen and (max-width: 600px) {
     .about__me {
-        width: 65%;
+        width: 45%;
         margin: 0 auto 3rem;
     }
 
