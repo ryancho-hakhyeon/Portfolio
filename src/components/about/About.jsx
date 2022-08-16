@@ -37,6 +37,7 @@ const About = () => {
                             <ul>
                                 <li>freeCodeCamp 2022</li>
                                 <li>Python & JavaScript</li>
+                                <li>Data Analysis</li>
                             </ul>
                         </article>
 
