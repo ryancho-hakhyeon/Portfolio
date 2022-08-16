@@ -1,7 +1,7 @@
 import React from 'react'
 import './footer.css'
-//import {} from 'react-icons/'
-//import {} from 'react-icons/'
+import { BsGithub } from 'react-icons/bs'
+import { TiSocialLinkedinCircular } from 'react-icons/ti'
 //import {} from 'react-icons/'
 
 const Footer = () => {
@@ -17,11 +17,11 @@ const Footer = () => {
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      {/* <div className="footer__socials">
-        <a href="/#"></a>
-        <a href="/#"></a>
-        <a href="/#"></a>
-      </div> */}
+      <div className="footer__socials">
+        <a href="https://github.com/ryancho-hakhyeon"><BsGithub/></a>
+        <a href="https://www.linkedin.com/in/ryan-hakhyeon-cho-9832a019b/"><TiSocialLinkedinCircular/></a>
+        {/* <a href="/#"></a> */}
+      </div>
 
       <div className="footer__copyright">
         <small>&copy; RyanCho Tutorials. All rights reserved.</small>

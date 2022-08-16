@@ -5,13 +5,14 @@ import IMG2 from '../../assets/portfolio2.jpg'
 import IMG3 from '../../assets/portfolio3.jpg'
 import IMG4 from '../../assets/portfolio4.jpg'
 import IMG5 from '../../assets/portfolio5.jpg'
+import IMG6 from '../../assets/portfolio6.jpg'
 
 const data = [
   {
     id: 1, 
     image: IMG1,
     title: 'Work Time Schedule',
-    status: 'In progress...',
+    status: 'In progress',
     github: 'https://github.com/ryancho-hakhyeon/TimeSchedulerApp',
     demo: 'https://github.com/ryancho-hakhyeon/TimeSchedulerApp'
   },
@@ -19,7 +20,7 @@ const data = [
     id: 2, 
     image: IMG2,
     title: 'Task Management',
-    status: 'In progress...',
+    status: 'In progress',
     github: 'https://github.com',
     demo: 'https://github.com'
   },
@@ -27,7 +28,7 @@ const data = [
     id: 3, 
     image: IMG3,
     title: 'Pill Management',
-    status: 'Concepting...',
+    status: 'Concept',
     github: 'https://github.com',
     demo: 'https://github.com'
   },
@@ -35,7 +36,7 @@ const data = [
     id: 4, 
     image: IMG4,
     title: 'Eye Tracking',
-    status: 'Concepting...',
+    status: 'Concept',
     github: 'https://github.com',
     demo: 'https://github.com'
   },
@@ -43,7 +44,15 @@ const data = [
     id: 5, 
     image: IMG5,
     title: 'Unit Convert',
-    status: 'Concepting...',
+    status: 'Concept',
+    github: 'https://github.com',
+    demo: 'https://github.com'
+  },  
+  {
+    id: 6, 
+    image: IMG6,
+    title: 'Incomes Dashboards',
+    status: 'Concept',
     github: 'https://github.com',
     demo: 'https://github.com'
   },
