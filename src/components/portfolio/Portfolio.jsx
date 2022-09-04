@@ -12,7 +12,7 @@ const data = [
     id: 1, 
     image: IMG1,
     title: 'Work Time Schedule',
-    status: 'In progress',
+    status: 'Progress',
     github: 'https://github.com/ryancho-hakhyeon/TimeSchedulerApp',
     demo: 'https://github.com/ryancho-hakhyeon/TimeSchedulerApp'
   },
@@ -20,7 +20,7 @@ const data = [
     id: 2, 
     image: IMG2,
     title: 'Task Management',
-    status: 'In progress',
+    status: 'Progress',
     github: 'https://github.com',
     demo: 'https://github.com'
   },
@@ -43,18 +43,18 @@ const data = [
   {
     id: 5, 
     image: IMG5,
-    title: 'Unit Convert',
-    status: 'Concept',
-    github: 'https://github.com',
-    demo: 'https://github.com'
+    title: 'Weather Forecast',
+    status: 'Update',
+    github: 'https://github.com/ryancho-hakhyeon/Weather-Forecast-app',
+    demo: 'https://github.com/ryancho-hakhyeon/Weather-Forecast-app'
   },  
   {
     id: 6, 
     image: IMG6,
     title: 'Incomes Dashboards',
-    status: 'Concept',
-    github: 'https://github.com',
-    demo: 'https://github.com'
+    status: 'Progress',
+    github: 'https://github.com/ryancho-hakhyeon/Income-Dashboard',
+    demo: 'https://github.com/ryancho-hakhyeon/Income-Dashboard'
   },
 ]
 
