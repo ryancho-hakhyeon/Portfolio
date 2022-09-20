@@ -4,19 +4,57 @@ import CTA from './CTA'
 import IMG from '../../assets/me.jpg'
 import HeaderSocial from './HeaderSocials'
 
-const Header = () => {
+const Header = () => {  
   return (
     <header>
       <div className="container header__container">
-        <h5> Hello I'm </h5>
-        <h1> Ryan Cho </h1>
-        <h5 className='text-light'> Junior Developer </h5>
-        <CTA />
-        <HeaderSocial />
+        
+        <div className='explained__me-box'>
+          <div className='explained__text'>
+            <span>Hello !</span>
+            <p>I'm Ryan Cho,</p>
+            <p className='explained__text-effect'>Junior Developer!</p>
 
-        <div className="me">
-          <img src={IMG} alt='me'/>
+            <div className='explained__me-words'>
+              <div className='small-size-img'></div>
+              <span>P</span>
+              <span>a</span>
+              <span>s</span>
+              <span>s</span>
+              <span>i</span>
+              <span>o</span>
+              <span>n</span>
+              <span>,</span><br></br>
+              <span>C</span>
+              <span>h</span>
+              <span>e</span>
+              <span>l</span>
+              <span>l</span>
+              <span>e</span>
+              <span>g</span>
+              <span>e</span>
+              <span>,</span><br></br>
+              <span>P</span>
+              <span>a</span>
+              <span>t</span>
+              <span>i</span>
+              <span>e</span>
+              <span>n</span>
+              <span>c</span>
+              <span>e</span>
+              <span>.</span>
+            </div>
+
+            <CTA/>
+          </div>
+
+          <div className="me">
+            <img src={IMG} alt='me' className="me-img"/>
+            <div className='me-img-shadow'></div>
+          </div>
         </div>
+        
+        <HeaderSocial />
 
         <a href='#contact' className='scroll__down'>Scroll Down</a>
       </div>

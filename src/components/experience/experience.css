@@ -4,7 +4,7 @@
 
 .experiences {
     background: var(--color-bg-variant);
-    padding: 2rem;
+    padding: 4rem;
     border-radius: 2rem;
     user-select: none;
     display: flex;
@@ -43,6 +43,21 @@
     .container.experience__container{
         width: var(--container-width-sm);
     }
+
+    .experiences {
+        flex-direction: column;
+    }
+
+    .experience__title {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .experience__detail-icon {
+        margin-right: 1rem;
+    }
+
     .experience__review {
         width: var(--container-width-sm);
         font-size: 13px;

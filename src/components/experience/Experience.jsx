@@ -4,16 +4,17 @@ import './experience.css'
 import { SiCheckmarx } from 'react-icons/si'
 
 // import Swiper core and required modules
-import { Pagination } from 'swiper'
+import { Pagination, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/swiper.min.css';
 import 'swiper/modules/pagination/pagination.min.css'
+import "swiper/modules/navigation/navigation.min.css";
 
 const data = [
   {
-    title: 'BCIT ISSP Projects',
+    title: 'BCIT ISSP Practicums',
     review: 'During the BCIT program, it was the composition of the project was very similar to industry work. During 15 weeks with real clients, supervisors, and teammates, it was discussed technical opinions, demands, and possible results, and all those projects experiences were under the Agile methodology. I mostly took a part in catching errors and shaping data format. Also, I supported team mates to develop software in order to move next stage of development.'
   },
   {
@@ -42,21 +43,22 @@ const Experience = () => {
       <h2>My Experience</h2>
 
       <Swiper className='container experience__container'
-            modules={[Pagination]}
+            modules={[Pagination, Navigation]}
+            navigation={true}
             spaceBetween={40}
             slidesPerView={1}
             
-            pagination={{ clickable: true }}>
+            pagination={{ type: "fraction", }}>
         {
           data.map(({title, review}, index) => {
             return (
               <SwiperSlide key={index} className='experiences'>              
-                <SiCheckmarx className='experience__detail-icon'/>
                 <div className='experience__title'>
+                <SiCheckmarx className='experience__detail-icon'/>
                   <h3>{title}</h3>
                 </div>
                 <small className='experience__review'>{review}</small>
-            </SwiperSlide>
+              </SwiperSlide>
             )
           })
         }

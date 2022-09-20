@@ -1,11 +1,10 @@
 header {
     height: 100vh;
-    padding-top: 7rem;
+    padding-top: 4rem;
     overflow: hidden;
 }
 
 .header__container {
-    text-align: center;
     height: 100%;
     position: relative;
 }
@@ -13,10 +12,9 @@ header {
 /* ==================== CTA ==================== */
 
 .cta {
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
     display: flex;
-    gap: 1.2rem;
-    justify-content: center;
+    gap: 2rem;
 }
 
 /* ==================== HEADER SOCIALS ==================== */
@@ -40,16 +38,123 @@ header {
 
 /* ==================== ME ==================== */
 
+.small-size-img {
+    display: none;
+}
+
+.explained__me-box {
+    display: flex;
+}
+
 .me {
-    background: linear-gradient(var(--color-primary), transparent);
-    width: 22rem;
-    height: 30rem;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     margin-top: 4rem;
-    border-radius: 12rem 12rem 0 0;
-    overflow: hidden;
+    right: 5%;
+    width: 500px;
+    z-index: 1;
+    transition: var(--transition);
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+.me-img {
+    box-shadow: 10px 10px 0 5px var(--color-white), -10px -10px 0 5px var(--color-orange);
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.explained__text {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    width: 700px;
+    z-index: 2;
+}
+
+.explained__text-effect {
+    text-shadow: 3px -5px 0 var(--color-primary), 3px 4px 0 var(--color-orange);
+}
+
+.explained__text-effect:hover {
+    font-style: italic;
+    color: var(--color-primary);
+    text-shadow: none;
+    font-size: 4.1rem;
+    transition: var(--transition);
+}
+
+.explained__text > p {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 6rem;
+}
+
+.explained__text > span {
+    font-size: 3rem;
+    line-height: 8.5rem;
+}
+
+.explained__me-words {
+    margin-top: 3.5rem;
+    margin-left: 3rem;
+    font-weight: 900;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.explained__me-words span {
+    margin-top: 1rem;
+    padding: 0 1rem 0 1rem;
+    position: relative;
+    display: inline-block;
+    animation: textAnimation 1s infinite alternate cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.explained__me-words span:nth-child(1n) {
+    animation-delay: -0.166s;
+}
+
+.explained__me-words span:nth-child(2n) {
+    animation-delay: -0.33s;
+}
+
+.explained__me-words span:nth-child(3n) {
+    animation-delay: -0.5s;
+}
+
+
+@keyframes textAnimation {
+    0% {
+        transform: translate3d(0, 0, 0);
+        text-shadow: 0em 0em 0 var(--color-white);
+        color: var(--color-primary);
+    }
+    30% {
+        transform: translate3d(0, 0, 0);
+        text-shadow: 0em 0em 0 var(--color-white);
+        color: var(--color-primary);
+    }
+    70% {
+        transform: translate3d(0.08em, -0.08em, 0);
+        text-shadow: -0.08em 0.08em var(--color-white);
+        color: var(--color-primary);
+    }
+    100% {
+        transform: translate3d(0.08em, -0.08em, 0);
+        text-shadow: -0.08em 0.08em var(--color-white);
+        color: var(--color-primary);
+    }
+}
+
+.me > img {
+    height: inherit;
+    border-radius: 30% 70% 67% 33% / 30% 30% 70% 70%;
+    z-index: -1;
 }
 
 /* ==================== SCROLL DOWN ==================== */
@@ -68,9 +173,42 @@ header {
     header {
         height: 100vh;
     }
+
+    .small-size-img {
+        display: none;
+    }
+
+    .explained__text {
+        margin-top: 0.5rem;
+        width: 500px;
+    }
+
+    .explained__text-effect:hover {
+        font-size: 3.4rem;
+    }
+
+    .explained__text > p {
+        font-size: 3rem;
+        line-height: 4.5rem;
+        z-index: 1;
+    }
+
+    .explained__me-words {
+        margin-top: 2.5rem;
+    }
+
+    .explained__me-words span {
+        padding: 0 0.5rem 0 0.5rem;
+    }
+
+    .me {
+        transition: var(--transition);
+        z-index: -1;
+        width: 400px;
+    }
 }
 
-/* ============ Media Queries (Medium Devices) ============ */
+/* ============ Media Queries (Small Devices) ============ */
 @media screen and (max-width: 600px) {
     header {
         height: 100vh;
@@ -78,5 +216,51 @@ header {
 
     .header__socials, .scroll__down {
         display: none;
+    }
+
+    .explained__text-effect:hover {
+        font-size: 3.2rem;
+    }
+
+    .explained__text {
+        margin-top: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .me {
+        transition: var(--transition);
+        animation: 1s forwards slide-out;
+    }
+
+    .small-size-img {
+        display: inline;
+        height: 300px;
+        width: 100%;
+        background-image: url('../../assets/me.jpg');
+        position: absolute;
+        border-radius: 300px;
+        filter: blur(3px);
+        opacity: 0.7;
+        box-shadow: 0 0 20px 30px inset var(--color-bg), 0 0 30px 30px var(--color-bg);
+        z-index: -1;
+    }
+
+    .explained__me-words {
+        padding: 0;
+        margin: 0;
+        margin-top: 2.5rem;
+    }
+
+    .explained__me-words span {
+        padding: 0 3px 0 3px;
+    }
+
+    @keyframes slide-out {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
     }
 }
