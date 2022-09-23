@@ -18,6 +18,7 @@
 }
 
 .portfolio__items-image {
+    height: 180px;
     border-radius: 1.5rem;
     overflow: hidden;
 }

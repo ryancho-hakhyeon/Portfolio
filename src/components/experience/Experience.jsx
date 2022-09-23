@@ -41,11 +41,8 @@ const data = [
   }
 ]
 
-
 const Experience = () => {
   const [open, setOpen] = useState(false)
-
-  console.log(open)
 
   return (
     <section id='experience'>
