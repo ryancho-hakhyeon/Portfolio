@@ -4,24 +4,24 @@ import IMG1 from '../../assets/portfolio1.jpg'
 import IMG2 from '../../assets/portfolio2.jpg'
 import IMG3 from '../../assets/portfolio3.jpg'
 import IMG4 from '../../assets/portfolio4.jpg'
-import IMG5 from '../../assets/portfolio5.jpg'
-import IMG6 from '../../assets/portfolio6.jpg'
+import IMG6 from '../../assets/portfolio5.jpg'
+import IMG5 from '../../assets/weather.jpg'
 
 const data = [
   {
     id: 1, 
     image: IMG1,
-    title: 'Work Time Schedule',
+    title: 'Schedule & Employee Management',
     status: 'Progress',
-    github: 'https://github.com/ryancho-hakhyeon/TimeSchedulerApp',
-    demo: 'https://github.com/ryancho-hakhyeon/TimeSchedulerApp'
+    github: 'https://github.com/ryancho-hakhyeon/SchedulerAndManagement',
+    demo: 'https://github.com/ryancho-hakhyeon/SchedulerAndManagement'
   },
   {
     id: 2, 
     image: IMG2,
-    title: 'Task Management',
-    status: 'Progress',
-    github: 'https://github.com',
+    title: 'Task Management & Todo List',
+    status: 'Progress(Task) & Update(Todo)',
+    github: 'https://github.com/ryancho-hakhyeon/ToDo-list',
     demo: 'https://github.com'
   },
   {
@@ -35,9 +35,9 @@ const data = [
   {
     id: 4, 
     image: IMG4,
-    title: 'Eye Tracking',
-    status: 'Concept',
-    github: 'https://github.com',
+    title: 'Machine Learning',
+    status: 'Progress',
+    github: 'https://github.com/ryancho-hakhyeon/MachinLearning',
     demo: 'https://github.com'
   },
   {
@@ -51,14 +51,15 @@ const data = [
   {
     id: 6, 
     image: IMG6,
-    title: 'Incomes Dashboards',
-    status: 'Progress',
+    title: 'Dashboards',
+    status: 'Update',
     github: 'https://github.com/ryancho-hakhyeon/Income-Dashboard',
     demo: 'https://github.com/ryancho-hakhyeon/Income-Dashboard'
   },
 ]
 
 const Portfolio = () => {
+
   return (
     <section id='portfolio'>
       <h5>My Recent Work</h5>
@@ -74,10 +75,10 @@ const Portfolio = () => {
                 </div>
                 <h3>{title}</h3>
                 <h4>{status}</h4>
-                  <div className="portfolio__items-cta">
-                    <a href={github} className='btn' rel="noopener noreferrer" target='_blank'>Github</a>
-                    <a href={demo} className='btn btn-primary' rel="noopener noreferrer" target='_blank'>Live Demo</a>
-                  </div>
+                <div className="portfolio__items-cta">
+                  <a href={github} className='btn' rel="noopener noreferrer" target='_blank'>Github</a>
+                  <a href={demo} className='btn btn-primary' rel="noopener noreferrer" target='_blank'>Live Demo</a>
+                </div>
               </article>
             )
           })

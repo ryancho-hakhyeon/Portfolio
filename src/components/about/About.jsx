@@ -51,7 +51,6 @@ const About = () => {
             setOpenEducation(false)
             setOpenCertificates(false)
         }
-        console.log(id)
     }
     
     return (
@@ -111,14 +110,18 @@ const About = () => {
                                 <h3>BCIT Practicums 2021</h3>
                                 <ul>
                                     <li>
-                                        <p>Singular Hearing</p>
-                                        <GoCheck className='hide-icons'/> Improved the back-end more robust by the port-specific and the web server such as Nginx.
+                                        <p>Singular Hearing -
+                                            <a className='hide-links' href="https://www.youtube.com/watch?v=o1QyyBPeFL4">Demo</a>
+                                        </p>
+                                        <GoCheck className='hide-icons'/> Improved the back-end more robust by the port-specific and the web server.
                                         <br></br>
                                         <GoCheck className='hide-icons'/> Implemented features : Added mode selection and progress bar, Displayed denoised audio results (downloadable), Compared all results.
                                     </li>
                                     <li>
-                                        <p>City Studio Vancouver</p>
-                                        <GoCheck className='hide-icons'/> Built an application for collecting data - https://citystudiovancouver.com/projects/pycity/
+                                        <p>City Studio Vancouver - 
+                                            <a className='hide-links' href="https://citystudiovancouver.com/projects/pycity/">Link</a>
+                                        </p>
+                                        <GoCheck className='hide-icons'/> Built an application for collecting data
                                         <br></br>
                                         <GoCheck className='hide-icons'/> Implemented each city’s APIs which are given to grab published data.<br></br>
                                         <GoCheck className='hide-icons'/> Saved all collected data into an excel file sequentially by year and location.
@@ -134,7 +137,13 @@ const About = () => {
                             </div>
                             :
                             <div className="default-contents">
-                                Default
+                                <div className='eye'>
+                                    <div className='ball'></div>
+                                </div>
+
+                                <div className='eye'>
+                                    <div className='ball'></div>
+                                </div>
                             </div>
                         }
                     </div>
