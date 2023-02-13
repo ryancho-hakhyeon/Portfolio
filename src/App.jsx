@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
 import Loads from './components/loads/Loads';
-import Header from './components/header/Header'
-import Nav from './components/nav/Nav'
-import About from './components/about/About'
-// import Experience from './components/experience/Experience'
-import Portfolio from './components/portfolio/Portfolio'
-// import Services from './components/services/Services'
-import Contact from './components/contact/Contact'
-import Footer from './components/footer/Footer'
+import Header from './components/header/Header';
+import Nav from './components/nav/Nav';
+import About from './components/about/About';
+// import Experience from './components/experience/Experience';
+import Portfolio from './components/portfolio/Portfolio';
+// import Services from './components/services/Services';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 
-import './App.css'
+import './App.css';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -63,7 +63,8 @@ const App = () => {
               <div className='bubble bubble-28'></div>
               <div className='bubble bubble-29'></div>
               <div className='bubble bubble-30'></div>
-            </div>        
+            </div> 
+                   
             <Header />
             <Nav />
             <About />
@@ -78,21 +79,3 @@ const App = () => {
 }
 
 export default App;
-
-
-// const App = () => {
-//     return (
-//         <>
-//             <Header />
-//             <Nav />
-//             <About />
-//             <Experience />
-//             <Portfolio />
-//             <Services />
-//             <Contact />
-//             <Footer />
-//         </>
-//     )
-// }
-
-// export default App

@@ -61,8 +61,8 @@ h1 {
 }
 
 section {
-    margin-top: 7rem;
-    margin-bottom: 2rem;
+    /* margin-top: 7rem; */
+    margin-bottom: 7rem;
 }
 
 section > h2, section > h5 {
