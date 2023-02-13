@@ -1,14 +1,32 @@
+#about {
+    height: 100vh;
+}
+
 .about__container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 1rem;
+    margin-top: 4rem;
+    /* border: 1px solid black; */
+}
+
+.about__content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .about__cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    width: 400px;
+    height: 800px;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 5;
 }
 
 .about__card {
@@ -18,6 +36,8 @@
     padding: 1.5rem;
     text-align: center;
     transition: val(--transition);
+    margin-bottom: 3rem;
+    width: 300px;
 }
 
 .about__card:hover {
@@ -26,166 +46,167 @@
     cursor: pointer;
 }
 
-/* ========================= DROW EYES ======================== */
-.default-contents {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* ====================== About Timeline ====================== */
+
+.about__timeline {
     position: relative;
-    transition: var(--transition);
+    /* border: 1px solid black; */
+    width: 750px;
 }
 
-.face {
-    width: 300px;
-    height: 300px;
-    background-color: var(--color-white);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.eyelid {
+.about__timeline::after {
+    content: "";
     position: absolute;
-    width: 180px;
-    height: 100px;
-    background-color: var(--color-white);
+    width: 3px;
+    height: 730px;
+    background: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-container {
+    padding: 5px 15px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+}
+
+/* =========================== Circle =========================== */
+.timeline-container::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    right: -12px;
+    background: #ffffff;
+    border: 4px solid #006e51;
+    border-radius: 16px;
     z-index: 1;
-    top: -70px;
-    animation: blink 4.5s infinite ease-in alternate;
 }
 
-@keyframes blink {
-    0% {
-        top: -70px;
-    }
-    95% {
-        top: -70px;
-    }
-    100% {
-        top: -10px;
-    }
-}
-
-.eyes {
+/* =========================== Line =========================== */
+.timeline-container::before {
+    content: "";
     position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    width: 40px;
+    height: 3px;
+    top: calc(52%);
+    right: 8px;
+    background: #006e51;
+    z-index: 1;
 }
 
-.eye {
-    border-radius: 50%;
-    height: 90px;
-    width: 90px;
-    background-color: #f3efef;
-}
-
-.pupil {
-    position: absolute;
-    background-color: #382e25;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    left: 50px;
-    top: 35px;
-}
-
-/* =========================== Hide Box =========================== */
-.hide__container {
-    width: 100%;
-    height: 550px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hide__contents {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%; 
-    height: 550px;
-    padding: 2rem 3rem 2rem 3rem;
+.timeline-container.left {
+    left: 0;
     transition: var(--transition);
-    animation: 1.5s ease childBoxOpen;
 }
 
-.hide__contents::before {
-    margin: 2rem;
-    border: 3px solid var(--color-primary);
-    border-right: none;
-    bottom: -6px;
-    content: '';
-    left: -9px;
+.timeline-container.right {
+    left: 50%;
+    transition: var(--transition);
+}
+
+/* =================== Timeline Container Blur Effect =======================*/
+.timeline-container.left.activate {
+    filter: blur(4px);
+    transition: var(--transition);
+}
+
+.timeline-container.right.activate {
+    filter: blur(4px);
+    transition: var(--transition);
+}
+/* =========================== Circle =========================== */
+.timeline-container.right::after {
+    left: -12px;
+}
+
+/* =========================== Line =========================== */
+.timeline-container.right::before {
+    left: 8px;
+}
+
+/* =========================== Date Style =========================== */
+.timeline-container .date {
     position: absolute;
-    top: -6px;
-    width: 6px;
+    display: inline-block;
+    top: calc(50% - .7rem);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(166, 165, 165);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+  
+.timeline-container.left .date {
+    right: -7.3rem;
+    transition: var(--transition);
 }
 
-.hide__contents::after {
-    margin: 2rem;
-    border: 3px solid var(--color-primary);
-    border-left: none;
-    bottom: -6px;
-    content: '';
-    right: -9px;
-    position: absolute;
-    top: -6px;
-    width: 6px;
+.timeline-container.right .date {
+    left: -7rem;
+    transition: var(--transition);
 }
 
-@keyframes childBoxOpen{
-    from {
-        width: 0;
-        height: 0;
-        opacity: 0;
-    }
-
-    to {
-        width: 100%;
-        height: auto;
-        opacity: 1;
-    }
+/* Mouse Hover Highlight Effect */
+.timeline-container.right .date.activate {
+    transform: scale(1.5);
+    color: white !important;
+    left: -9rem !important;
+    transition: var(--transition);
 }
 
-.hide__contents > p, .hide__contents > ul > li > p {
-    line-height: 0;
-    padding-bottom: 1rem;
+.timeline-container.left .date.activate {
+    transform: scale(1.5);
+    color: white !important;
+    right: -9rem !important;
+    transition: var(--transition);
 }
 
-.hide-icons {
-    color: green;
+.timeline-container .timeline-content {
+    padding: 13px 50px 13px 30px;
+    background: #f6d155;
+    position: relative;
+    border-radius: 0 500px 500px 0;
 }
 
-.hide-links {
-    padding-left: 1.5rem;
-    margin-bottom: 2rem;
-    width: 150px;
+.timeline-container.right .timeline-content {
+    padding: 13px 0px 13px 50px;
+    border-radius: 500px 0 0 500px;
 }
 
-.certificate__logo {
-    object-fit: cover;
-    position: absolute;
-    width: 200px;
-    bottom: 0;
-    right: 0;
-    margin-bottom: 12rem;
-    margin-right: 6rem;
+/* =========================== TimeLine Text CSS =========================== */
+
+.timeline-container .timeline-content h2 {
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    color: #006e51;
 }
 
-.certificate__img {
-    object-fit: cover;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 500px;
-    margin-bottom: 3rem;
-    margin-right: 4rem;
-    z-index: -1;
+.timeline-container .timeline-content p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: #000000;
+}
+
+
+/* =========================== Mouse-over Effect =========================== */
+.filter-blur {
+    filter: blur(4px);
+}
+
+.filter-highligt {
+    transform: scale(1.5);
+    color: white !important;
+    left: -8rem !important; 
 }
 
 /* =========================== ICON =========================== */
@@ -213,29 +234,85 @@
 /* ============ Media Queries (Medium Devices) ============ */
 @media screen and (max-width: 1024px) {
     .about__container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        margin-top: 1rem;
     }
 
-    .about__content p {
-        margin: 1rem 0 1rem;
+    .about__cards {
+        width: 300px;
     }
 
-    .hide__contents {
-        height: 500px;
-        overflow-y: scroll;
+    .about__card {
+        width: 250px;
     }
 
-    .hide__contents p {
-        margin-bottom: 0.5rem;
+    .about__timeline {
+        width: 500px;
+    }
+
+    .about__timeline::after {
+        height: 700px;
+    }
+
+    .timeline-container .timeline-content h2 {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    .timeline-container .timeline-content p {
+        font-size: 0.9rem;
+        line-height: 1rem;
+    }
+
+    .timeline-container .timeline-content {
+        padding-right: 35px;
+        padding-left: 15px;
+    }
+    
+    .timeline-container.right .timeline-content {
+        padding-right: 10px;
+        padding-left: 40px;
     }
 }
 
 /* ============ Media Queries (Small Devices) ============ */
 @media screen and (max-width: 600px) {
+    #about {
+        height: 100vh;
+    }
+    .about__container {
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    
+    .about__content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
     .about__cards {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.5rem;
+        width: 380px;
+        height: 150px;
+        /* border: 1px solid white; */
+    }
+
+    .about__card {
+        width: 120px;
+        height: 110px;
+    }
+
+    .about__card h5 {
+        font-size: 12px;
+    }
+
+    .about__card ul {
+        display: none;
     }
 
     .about__content {
@@ -246,17 +323,47 @@
         margin: 1rem 0;
     }
 
-    .hide__contents {
-        align-items: center;
-        overflow-y: scroll;
+    .about__timeline {
+        width: 380px;
     }
 
-    .hide__contents p {
-        padding: 0;
-        margin-bottom: 0.5rem;
+    .about__timeline::after {
+        height: 630px;
     }
 
-    .certificate__img, .certificate__logo {
-        display: none;
+    .timeline-container::before {
+        width: 20px;
+    }
+
+    .timeline-container.right .date.activate {
+        transform: scale(1.2);
+    }
+
+    .timeline-container.left .date.activate {
+        transform: scale(1.2);
+    }
+
+    .timeline-container .timeline-content {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 20px;
+        padding-left: 8px;
+    }
+
+    .timeline-container.right .timeline-content {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 8px;
+        padding-left: 20px;
+    }
+
+    .timeline-container .timeline-content h2 {
+        font-size: .8rem;
+        line-height: 1rem;
+    }
+
+    .timeline-container .timeline-content p {
+        font-size: .8rem;
+        line-height: .8rem;
     }
 }

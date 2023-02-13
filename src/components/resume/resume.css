@@ -1,0 +1,343 @@
+
+.resume__container {
+    display: grid;
+    gap: 20px;
+    margin-top: 30px;
+    margin-left: 20px;
+    grid-template-columns: 30% 67%;
+    height: 100%;
+}
+
+.container__left {
+    width: 100%;
+}
+
+.container__right {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Left Container */
+.profile_skills_box {
+    background: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.profile__container {
+    border-bottom: 1px solid #bdb8e3;  
+}
+
+.img-box {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center; 
+}
+
+.img-box div {
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    margin: 10px;
+    width: 350px;
+    height: 350px;
+    left: 50%;
+    overflow: hidden;
+}
+
+.img-box div img {
+    object-fit: cover;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    color: #606470;
+    line-height: 2.5rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.info-box div {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .8rem;
+}
+
+.info-box div span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#info-icon {
+    font-size: 1.5rem;
+}
+
+.skills__container {
+    margin-top: 10px;
+    padding: 15px;
+    color: #606470;
+}
+
+.skills-box, .languages-box {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.skills-box span {
+    font-style: italic;
+}
+
+/* Right Container */
+.summary__container, .experience__container, .education__container {
+    background: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.experience-box, .summary-box, .education-box {
+    margin: 0 20px 10px 20px;
+    color: #606470;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.experience-box p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.period-box {
+    color: #009688;
+    font-weight: bold;
+}
+
+.education-box p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.icon-img, .sub-icon {
+    color: #009688;
+    margin-right: 15px;
+}
+
+.title-txt {
+    font-size: 28px;
+    font-weight: bold;
+    color: #5c5470;
+}
+
+.subtitle-txt {
+    margin-top: 10px;
+}
+
+.program-title-txt {
+    font-weight: bold;
+    color: #757a79;
+}
+
+.language-level {
+    background: #f1f1f1;
+    border-radius: 20px;
+}
+
+.language-Beginner, .language-Intermediate, .language-Fluent, .language-Native {
+    border-radius: 20px;
+    height: 30px;
+    background: #009688;
+    text-align: center;
+    color: #f1f1f1;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+.language-Beginner {
+    width: 25%;
+}
+
+.language-Intermediate {
+    width: 50%;
+}
+
+.language-Fluent {
+    width: 75%;
+}
+
+.language-Native {
+    width: 100%;
+}
+
+/* ============ Button ============ */
+.cv__container {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 4rem;
+}
+
+/* Button Effects */
+.cv_button {
+    cursor: pointer;
+    background: #009688;
+    color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 15px;
+    width: 330px;
+    height: 64px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.34);
+}
+
+.cv_button span {
+    color: #fff;
+    display: block;
+    padding-left: 35px;
+    text-transform: uppercase;
+    font: bold 18px/66px Arial;
+    transform: scaleX(0.6);
+    letter-spacing: 3px;
+    transform-origin: center left;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.cv_button em {
+    position: absolute;
+    height: 1px;
+    background: #fff;
+    width: 47%;
+    right: 23px;
+    top: 50%;
+    transform: scaleX(0.25);
+    transform-origin: center right;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.cv_button::before, .cv_button::after {
+    content: "";
+    background: #fff;
+    height: 50%;
+    width: 0;
+    position: absolute;
+    transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.cv_button::before {
+    top: 0;
+    left: 0;
+    right: auto;
+    border-radius: 15px 15px 0 0;
+}
+
+.cv_button::after {
+    bottom: 0;
+    right: 0;
+    left: auto;
+    border-radius: 0 0 15px 15px;
+}
+
+.cv_button:hover:before {
+    width: 100%;
+    height: 32px;
+    right: 0;
+    left: auto;
+    border-radius: 15px 15px 0 0;
+}
+
+.cv_button:hover:after {
+    width: 100%;
+    height: 32px;
+    left: 0;
+    right: auto;
+    border-radius: 0 0 15px 15px;
+}
+
+.cv_button:hover span {
+    color: #000;
+}
+
+.bcv_buttontn:hover em {
+    background: #000;
+    transform: scaleX(1);
+}
+
+/* ============ Media Queries (Medium Devices) ============ */
+@media screen and (max-width: 1024px) {
+    .img-box div {
+        width: 250px;
+        height: 250px;
+    }
+
+    .info-box {
+        /* font-size: ; */
+    }
+
+    .cv_button {
+        width: 250px;
+    }
+}
+
+/* ============ Media Queries (Small Devices) ============ */
+@media screen and (max-width: 600px) {
+    .resume__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 380px;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .container__left {
+        padding: 10px;
+        width: 370px;
+    }
+
+    .container__right {
+        padding: 10px;
+        width: 370px;
+    }
+
+    .cv__container {
+        margin-top: 4rem;
+        gap: 2rem;
+    }
+
+    .summary__container, .experience__container, .education__container {
+        margin: 0;
+        width: 350px;
+    }
+
+    .title-txt {
+        line-height: 2.5rem;
+    }
+
+    .subtitle-txt {
+        line-height: 1.5rem;
+    }
+
+    .period-box {
+        padding-top: 5px;
+    }
+}
