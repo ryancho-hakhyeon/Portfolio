@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Baloo+Paaji');
-/* @import 'https://fonts.googleapis.com/css?family=Baloo+Paaji'; */
+@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
 
 #header {
     height: 100vh;
@@ -464,9 +463,10 @@
 @media screen and (max-width: 600px) {
     #header {
         margin-top: 0;
+        margin-bottom: 30rem;
         padding-top: 5rem;
         padding-left: 4rem;
-        height: 180vh;
+        height: 100vh;
     }
 
     .header__socials, .scroll__down {

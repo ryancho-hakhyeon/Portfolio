@@ -1,100 +1,88 @@
 import React, { useState } from 'react'
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
+import { FaGithub } from 'react-icons/fa'
+
+import Sample_IMG from "../../assets/laptop.png"
+import Sample_MB from "../../assets/mobile2.png"
 import './experience.css'
 
-import { SiCheckmarx } from 'react-icons/si'
-import { AiOutlineCloseCircle } from 'react-icons/ai'
- 
-// import Swiper core and required modules
-import { Pagination, Navigation } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-
-// Import Swiper styles
-import 'swiper/swiper.min.css';
-import 'swiper/modules/pagination/pagination.min.css'
-import "swiper/modules/navigation/navigation.min.css";
-
-const data = [
+const project_data = [
   {
-    title: 'BCIT ISSP Practicums',
-    review: 'During the BCIT program, it was the composition of the project was very similar to industry work. During 15 weeks with real clients, supervisors, and teammates, it was discussed technical opinions, demands, and possible results, and all those projects experiences were under the Agile methodology. I mostly took a part in catching errors and shaping data format. Also, I supported team mates to develop software in order to move next stage of development.',
-    tools: ['JavaScript', 'Python', 'Github', 'APIs', ]
+    project_title: 'Weather Forecast',
+    image: ``,
+    github_url: 'https://github.com/ryancho-hakhyeon/Weather-Forecast-app',
+    contents: "To predict and see weather by the location where you want to know and search. The application shows various locations as options that are able to choose from. Also, It displays different modes as Dashboard and Mobile versions, and the background and weather icons are changed by the time and weather conditions.",
+    technologies: ['React', 'Weather APIs', 'Geographic APIs']
   },
   {
-    title: 'BCIT Personal Projects - Provision & CI/CD',
-    review: 'Mostly focused on how to process between backend, frontend, and database services. The various development tools were used for different purposes like Python and Node.js for the backend, React for the frontend, MongoDB and MySQL for the database, and Ansible, Docker, and AWS / Azure for the deployment.',
-    tools: ['JavaScript', 'Python', 'MySQL', 'Jenkins', 'Ansible', 'Docker', 'AWS', 'Node', 'React']
+    project_title: 'Budget Dashboard',
+    image: ``,
+    github_url: 'https://github.com/ryancho-hakhyeon/Income-Dashboard',
+    contents: "Full stack application with a calculated budget you have and spend monthly and annually. The UI emulates a basic dashboard popularly used, and it shows concise and clear budget history with charts and tables. And, all data is ably exported in excel format, and it will be re-shaped to easily read and see.",
+    technologies: ['Flask', 'Pandas', 'ChartJS', 'Bootstrap', 'Bootstrap-table']
   },
   {
-    title: 'BCIT Personal Projects - Data Analysis',
-    review: 'By using Python libraries such as Panda, Numpy, and Matplotlib, I analyzed data that get from the open data portal. I mostly focused on a re-shape of data in order for easily analyzing, then I made visualization outcomes that are easily understandable. ',
-    tools: ['Python', 'Numpy', 'Matplotlib',]
+    project_title: 'Management Application',
+    image: ``,
+    github_url: 'https://github.com/ryancho-hakhyeon/Management',
+    contents: "Another full stack application with MEAN stack style to manage information under the web environments. This web application is able to access data through CRUD(Create, Read, Update, Delete) operations of persistent storage. It represents a clearly understandable UI that users must use for reading data, updating or editing data, and deleting data.",
+    technologies: ['Angular','Materials', 'Bootstrap', 'Express', 'NodeJS', 'MongoDB']
   },
   {
-    title: 'Self-Learning',
-    review: 'Self-learning by the LeetCode and freeCodeCamp! - I am solving various algorithm-related problems which are mostly ranked easy, and medium levels that the LeetCode provides, and in the freeCodeCamp, I am trying to get a few certificates that are software development related. Now, I got programming languages(Python and JavaScript) certificates, and I am continuously doing my best to keep going to do.',
-    tools: ['JavaScript', 'Python']
-  },
-  {
-    title: 'Personal Projects',
-    review: 'Way of keeping my interest! - It is able to check every project on Github. Most projects are built in JavaScript and Python programming languages, and I do both types of development like Web-based and App development. Moreover, the tools I use are below the skills section or described in the README.md file in each Github repository. ',
-    tools: ['JavaScript', 'Python', 'React', 'Angular', 'Bootstrap', 'Chartjs', 'Node', 'Flask', 'MySQL',]
+    project_title: 'Provisioning & CI/CD',
+    image: ``,
+    github_url: '',
+    contents: "Understanding automatic management of infrastructure by using cloud computing. This application simply shows the basic setup and procedure for managing web-based applications in the current industry's field used.",
+    technologies: ['AWS', 'Azure', 'Docker', 'GitLab', 'Discord', 'Ubuntu', 'Ansible', 'Github']
   }
 ]
 
 const Experience = () => {
-  const [open, setOpen] = useState(false)
+  const [degree, setDegree] = useState(0)
 
   return (
     <section id='experience'>
-      <h5>What I Have Done</h5>
-      <h2>My Experience</h2>
+        <h5> My Works </h5>
+        <h2> Projects </h2>
+        <div className='container myworks__container'>
+            <div className='projects-container' style={ {transform: `translateZ(-491px) rotateY(${degree}deg)`}}>
+                {
+                  project_data.map((data, idx) => {
+                    return (
+                      <div className='project-item' key={ idx }>
+                        <div className='project-img-container'>
+                          <img src={ Sample_IMG } alt="sample" className='project-img laptop'/>
+                          <img src={ Sample_MB } alt="phone" className='project-img phone'/>
+                        </div>
+                        <a href={ data.github_url } target='_blank' rel="noreferrer" className='btn btn-source'>Source Code<FaGithub className='icon-source'/></a>
+                        <div className='project-details'>
+                          <h2>{ data.project_title }</h2>
+                          <p>{ data.contents }</p>
+                    
+                          <p className='project-tech'>Technologies: </p> 
+                          {
+                            data.technologies.map((tech, idx) => {
+                              return <span key={idx} className="tech-item">{tech}</span>
+                            })
+                          }
+                          
+                        </div>
+                      </div>
+                    )
+                  })
+                }
+            </div>
 
-      <Swiper className='container experience__container'
-            modules={[Pagination, Navigation]}
-            navigation={true}
-            spaceBetween={40}
-            slidesPerView={1}
-            
-            pagination={{ type: "fraction", }}>
-        {
-          data.map(({title, review, tools}, index) => {
-            return (
-              <SwiperSlide key={index} className='experiences'>              
-                  {open ?
-                  <div className='read-more__container'>
-                    <div className='read-more__background'></div>
-                    <div className='read-more__icon-box' >
-                      <AiOutlineCloseCircle onClick={() => setOpen(false)} />
-                    </div>
-                    <div className='read-more__contents'>
-                      {review}
-                    </div>
-                  </div> :
-                  <>
-                    <div className='experience__title'>
-                      <SiCheckmarx className='experience__detail-icon'/>
-                        <h3>{title}</h3>
-                        </div>
-                        <small className='experience__review'>{review}</small>
-                        <div className='experience__read-more'>
-                          <button className='btn btn-primary' onClick={() => setOpen(true)}>Read</button>
-                        </div>
-                        <div className='experience__tools'>
-                          <h4>Experience With</h4>
-                          { tools.map((idx) => (
-                            <div key={idx} className='tool-icon'>
-                              <span>{idx}</span>
-                            </div>
-                          ))}
-                    </div>
-                  </>
-                  }
-                
-              </SwiperSlide>
-            )
-          })
-        }
-      </Swiper>
+            <div className='nav'>
+                <button className='prev' onClick={() => setDegree(degree - 90)}>
+                  <IoIosArrowBack className='nav-icon'/>
+                </button>
+
+                <button className='next' onClick={() => setDegree(degree + 90)}>
+                  <IoIosArrowForward className='nav-icon' />
+                </button>
+            </div>
+        </div>
     </section>
   )
 }

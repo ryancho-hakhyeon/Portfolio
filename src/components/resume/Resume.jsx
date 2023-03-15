@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import './resume.css';
-import Loads from '../loads/Loads';
+import Loads from '../Loads/Loads';
 import AboutMe from '../../assets/me-about.jpg'
 import CV from '../../assets/Ryan Hakhyeon Cho Resume.pdf'
 
@@ -151,7 +151,7 @@ const Resume = () => {
                                     </div>
                                 </div>
 
-                                <div className="skills__container">
+                                <div className="technologies__container">
                                     <div>
                                         <div>
                                             <h2 className='title-txt'><FaCertificate className='icon-img'/>Skills</h2>

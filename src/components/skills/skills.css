@@ -1,0 +1,132 @@
+
+/* #skills {
+    height: 100vh;
+} */
+
+.skills__container {
+    height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* border: 1px solid white; */
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+/* ====================== TagCloud ====================== */
+.tagcloud__container {
+    position: relative;
+    top: 0;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: flex-start;
+    /* background: #282828;
+    border-radius: 40px; */
+    /* border: 1px solid white; */
+    width: 500px;
+    height: 450px;
+    padding: 0 1rem;
+}
+
+.tagcloud {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    top: 0;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.tagcloud--item {
+    color: #00ffffff;
+}
+
+/* ====================== Skills Explanation ====================== */
+
+.skills__explanation {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 1rem;
+}
+
+.skills__explanation div {
+    cursor: default;
+    background: var(--color-bg-variant);
+    padding: 1rem 2rem;
+    width: 100%;
+    /* border: 1px solid wheat; */
+    border-radius: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    box-shadow: #ffffff11 0px 1px 1px, #ffffff11 0px 2px 2px, #ffffff11 0px 4px 4px;
+    z-index: 5;
+}
+
+.skills__explanation div h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.skills__explanation div h3 span {
+    color: #1E90FF;
+    text-align: center;
+}
+
+/* ============ Media Queries (Medium Devices) ============ */
+@media screen and (max-width: 1024px) {
+    /* .skills__container {
+        width: 800px;
+    } */
+
+    .tagcloud__container {
+        width: 400px;
+    }
+
+    .skills__explanation {
+        width: 400px;
+    }
+
+    .skills__explanation div h3 {
+        margin-top: 1rem;
+        line-height: .5rem;
+    }
+
+    .skills__explanation div h3 span {
+        font-size: 1.2rem;
+    }
+
+    .skills__explanation div span {
+        font-size: .8rem;
+    }
+}
+
+/* ============ Media Queries (Small Devices) ============ */
+@media screen and (max-width: 600px) {
+    #skills {
+        height: 100vh;
+        margin-bottom: 25rem;
+    }
+
+    .skills__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tagcloud__container {
+        margin-top: 25rem;
+        width: 340px;
+        /* border: 1px solid white; */
+    }
+
+    .skills__explanation {
+        width: 340px;
+    }
+}
