@@ -54,7 +54,7 @@ const Experience = () => {
                           <img src={ Sample_IMG } alt="sample" className='project-img laptop'/>
                           <img src={ Sample_MB } alt="phone" className='project-img phone'/>
                         </div>
-                        <a href={ data.github_url } target='_blank' rel="noreferrer" className='btn btn-source'>Source Code<FaGithub className='icon-source'/></a>
+                        <a href={ data.github_url } target="_blank" without rel="noopener noreferrer" className='btn btn-source'>Source Code<FaGithub className='icon-source'/></a>
                         <div className='project-details'>
                           <h2>{ data.project_title }</h2>
                           <p>{ data.contents }</p>

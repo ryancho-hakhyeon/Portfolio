@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import './resume.css';
-import Loads from '../Loads/Loads';
+import Loads from '../loads/Loads';
 import AboutMe from '../../assets/me-about.jpg'
 import CV from '../../assets/Ryan Hakhyeon Cho Resume.pdf'
 

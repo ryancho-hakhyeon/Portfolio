@@ -1,7 +1,6 @@
-
-/* #experience {
-    height: 100vh;
-} */
+#experience {
+    margin-bottom: 15rem;
+}
 
 .myworks__container {
     perspective: 2000px;
