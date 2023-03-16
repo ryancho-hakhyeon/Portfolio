@@ -235,7 +235,7 @@
 @media screen and (max-width: 600px) {
     #experience {
         height: 100%;
-        margin-bottom: 5rem;
+        margin-bottom: 10rem;
     }
 
     .myworks__container {

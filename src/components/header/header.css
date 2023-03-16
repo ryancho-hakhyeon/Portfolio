@@ -509,7 +509,7 @@
 
     .me {
         /* border: 1px solid burlywood; */
-        width: 100%;
+        width: var(--container-width-sm);
         display: flex;
     }
     
