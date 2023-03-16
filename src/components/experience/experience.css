@@ -136,6 +136,9 @@
     padding: 1.7rem;
     border-radius: 20px;
     background-color: var(--color-bg-variant);
+}
+
+.project-details p {
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
@@ -145,10 +148,7 @@
     margin-top: 1rem;
     margin-bottom: .5rem;
     font-size: 1.3rem;
-    font-weight: bolder;
-    overflow-wrap: none !important;
-    word-wrap: none !important;
-    hyphens: none !important;
+    font-weight: bolder; 
 }
 
 .tech-item {
@@ -191,6 +191,10 @@
 
 /* ============ Media Queries (Medium Devices) ============ */
 @media screen and (max-width: 1024px) {
+    #experience {
+        height: 100%;
+        margin-bottom: 10rem;
+    }
     .myworks__container {
         width: 1000px;
     }
@@ -276,5 +280,10 @@
         margin-top: 6rem;
         margin-bottom: 1.5rem;
         font-size: 1rem;
+    }
+
+    .tech-item {
+        display: inline-block;
+        margin-bottom: .5rem;
     }
 }

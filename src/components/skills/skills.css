@@ -83,6 +83,11 @@
         width: 800px;
     } */
 
+    #skills {
+        height: 100%;
+        margin-bottom: 5rem;
+    }
+
     .tagcloud__container {
         width: 400px;
     }
@@ -124,8 +129,9 @@
     }
 
     .tagcloud__container {
-        padding: 0;
-        width: 100%;
+        display: none;
+        /* padding: 0;
+        width: 100%; */
         /* border: 1px solid white; */
     }
 

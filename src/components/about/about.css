@@ -1,6 +1,6 @@
-#about {
+/* #about {
     height: 100vh;
-}
+} */
 
 .about__container {
     display: flex;
@@ -226,6 +226,11 @@
 
 /* ============ Media Queries (Medium Devices) ============ */
 @media screen and (max-width: 1024px) {
+    #about {
+        height: 100%;
+        margin-bottom: 10rem;
+    }
+
     .about__container {
         margin-top: 1rem;
     }

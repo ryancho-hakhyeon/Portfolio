@@ -110,11 +110,11 @@ a:hover {
     color: var(--color-bg);
 }
 
-img {
+/* img {
     display: block;
     width: 100%;
     object-fit: cover;
-}
+} */
 
 /* ============ Media Queries (Medium Devices) ============ */
 @media screen and (max-width: 1024px) {
