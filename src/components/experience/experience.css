@@ -230,8 +230,8 @@
 /* ============ Media Queries (Small Devices) ============ */
 @media screen and (max-width: 600px) {
     #experience {
-        height: 100vh;
-        margin-bottom: 15rem;
+        height: 100%;
+        margin-bottom: 5rem;
     }
 
     .myworks__container {
@@ -239,7 +239,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 390px;
+        width: var(--container-width-sm);
     }
 
     .project-item {
@@ -247,7 +247,7 @@
     }
     
     .projects-container {
-        width: 380px;
+        width: 100%;
     }
 
     .prev, .next {

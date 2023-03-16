@@ -62,86 +62,84 @@ const About = () => {
             <h5> Get To Know </h5>
             <h2> About Me </h2>
 
-            <div className="container about__container">
-                <div className="about__content">
-                    <div className="about__cards">
-                        {
-                            data_about.map((data) => {
-                                return (
-                                    <div className='about__card' key={ data.id } onMouseEnter={() => handleMouseEnter(data.id)} onMouseLeave={() => handleMouseLeave(data.id)}>
-                                        {data.icon}
-                                        <h5>{data.title}</h5>
-                                        <ul>
-                                            {data.contents.map((content, idx) => <li key={idx}>{content}</li>)}
-                                        </ul>
-                                    </div>
-                                )
-                            })
-                        }
+            <div className="container about__container">                
+                <div className="about__cards">
+                    {
+                        data_about.map((data) => {
+                            return (
+                                <div className='about__card' key={ data.id } onMouseEnter={() => handleMouseEnter(data.id)} onMouseLeave={() => handleMouseLeave(data.id)}>
+                                    {data.icon}
+                                    <h5>{data.title}</h5>
+                                    <ul>
+                                        {data.contents.map((content, idx) => <li key={idx}>{content}</li>)}
+                                    </ul>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                
+                <div className='about__timeline'>
+                    <div className={`timeline-container right ${isEducation || isExperience ? "activate" : ""}`}>
+                        <div className={`date ${isCertificate ? "activate" : ""}`}>Jul 2022</div>
+
+                        <div className="timeline-content">
+                            <h2>freeCodeCamp</h2>
+                            <p>Python, JavaScript, Data Analysis</p>
+                        </div>
                     </div>
-                    
-                    <div className='about__timeline'>
-                        <div className={`timeline-container right ${isEducation || isExperience ? "activate" : ""}`}>
-                            <div className={`date ${isCertificate ? "activate" : ""}`}>Jul 2022</div>
 
-                            <div className="timeline-content">
-                                <h2>freeCodeCamp</h2>
-                                <p>Python, JavaScript, Data Analysis</p>
-                            </div>
+                    <div className={`timeline-container left ${isCertificate || isExperience ? "activate" : ""}`}>
+                        <div className={`date ${isEducation ? "activate" : ""}`}>Dec 2021</div>
+
+                        <div className="timeline-content">
+                            <h2>BCIT, Diploma</h2>
+                            <p>Graduated, Computer Information Technology(CIT)</p>
                         </div>
+                    </div>
 
-                        <div className={`timeline-container left ${isCertificate || isExperience ? "activate" : ""}`}>
-                            <div className={`date ${isEducation ? "activate" : ""}`}>Dec 2021</div>
+                    <div className={`timeline-container right ${isEducation || isCertificate ? "activate" : ""}`}>
+                        <div className={`date ${isExperience ? "activate" : ""}`}>Sep 2021</div>
 
-                            <div className="timeline-content">
-                                <h2>BCIT, Diploma</h2>
-                                <p>Graduated, Computer Information Technology(CIT)</p>
-                            </div>
+                        <div className="timeline-content">
+                            <h2>BCIT Practicum 2</h2>
+                            <p>Software Development - Singular Hearing</p>
                         </div>
+                    </div>
 
-                        <div className={`timeline-container right ${isEducation || isCertificate ? "activate" : ""}`}>
-                            <div className={`date ${isExperience ? "activate" : ""}`}>Sep 2021</div>
+                    <div className={`timeline-container left ${isEducation || isCertificate ? "activate" : ""}`}>
+                        <div className={`date ${isExperience ? "activate" : ""}`}>Jan 2021</div>
 
-                            <div className="timeline-content">
-                                <h2>BCIT Practicum 2</h2>
-                                <p>Software Development - Singular Hearing</p>
-                            </div>
+                        <div className="timeline-content">
+                            <h2>BCIT Practicum 1</h2>
+                            <p>Software Development - CityStudio Vancouver</p>
                         </div>
+                    </div>
 
-                        <div className={`timeline-container left ${isEducation || isCertificate ? "activate" : ""}`}>
-                            <div className={`date ${isExperience ? "activate" : ""}`}>Jan 2021</div>
+                    <div className={`timeline-container right ${isCertificate || isExperience ? "activate" : ""}`}>
+                        <div className={`date ${isEducation ? "activate" : ""}`}>Sep 2019</div>
 
-                            <div className="timeline-content">
-                                <h2>BCIT Practicum 1</h2>
-                                <p>Software Development - CityStudio Vancouver</p>
-                            </div>
+                        <div className="timeline-content">
+                            <h2>British Columbia Institute of Technology</h2>
+                            <p>Enrolled - Study CIT program</p>
                         </div>
+                    </div>
 
-                        <div className={`timeline-container right ${isCertificate || isExperience ? "activate" : ""}`}>
-                            <div className={`date ${isEducation ? "activate" : ""}`}>Sep 2019</div>
+                    <div className={`timeline-container left ${isEducation || isCertificate ? "activate" : ""}`}>
+                        <div className={`date ${isExperience ? "activate" : ""}`}>Mar 2012</div>
 
-                            <div className="timeline-content">
-                                <h2>British Columbia Institute of Technology</h2>
-                                <p>Enrolled - Study CIT program</p>
-                            </div>
+                        <div className="timeline-content">
+                            <h2>First Lieutenant</h2>
+                            <p>Work at Korea Army</p>
                         </div>
+                    </div>
 
-                        <div className={`timeline-container left ${isEducation || isCertificate ? "activate" : ""}`}>
-                            <div className={`date ${isExperience ? "activate" : ""}`}>Mar 2012</div>
+                    <div className={`timeline-container right ${isCertificate || isExperience ? "activate" : ""}`}>
+                        <div className={`date ${isEducation ? "activate" : ""}`}>Feb 2012</div>
 
-                            <div className="timeline-content">
-                                <h2>First Lieutenant</h2>
-                                <p>Work at Korea Army</p>
-                            </div>
-                        </div>
-
-                        <div className={`timeline-container right ${isCertificate || isExperience ? "activate" : ""}`}>
-                            <div className={`date ${isEducation ? "activate" : ""}`}>Feb 2012</div>
-
-                            <div className="timeline-content">
-                                <h2>Semyung University, Bachelor</h2>
-                                <p>Graduated, Computer Science - Software</p>
-                            </div>
+                        <div className="timeline-content">
+                            <h2>Semyung University, Bachelor</h2>
+                            <p>Graduated, Computer Science - Software</p>
                         </div>
                     </div>
                 </div>

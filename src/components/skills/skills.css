@@ -109,24 +109,29 @@
 /* ============ Media Queries (Small Devices) ============ */
 @media screen and (max-width: 600px) {
     #skills {
-        height: 100vh;
-        margin-bottom: 25rem;
+        height: 100%;
+        margin-bottom: 5rem;
+        /* border: 1px solid white; */
     }
 
     .skills__container {
+        /* border: 1px solid white; */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: var(--container-width-sm);
+        height: 100%;
     }
 
     .tagcloud__container {
-        margin-top: 25rem;
-        width: 340px;
+        padding: 0;
+        width: 100%;
         /* border: 1px solid white; */
     }
 
     .skills__explanation {
-        width: 340px;
+        padding: 0;
+        width: 100%;
     }
 }

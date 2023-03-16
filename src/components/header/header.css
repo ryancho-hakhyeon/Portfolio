@@ -463,10 +463,16 @@
 @media screen and (max-width: 600px) {
     #header {
         margin-top: 0;
-        margin-bottom: 30rem;
-        padding-top: 5rem;
-        padding-left: 4rem;
-        height: 100vh;
+        margin-bottom: 5rem;
+        height: 100%;
+        /* border: 1px solid white; */
+    }
+
+    .header__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .header__socials, .scroll__down {
@@ -474,9 +480,13 @@
     }
 
     .explained__me-box {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 4rem;
+        width: var(--container-width-sm);
+        /* border: 1px solid white; */
     }
 
     .explained__text-effect:hover {
@@ -485,12 +495,11 @@
 
     .explained__text {
         margin-top: 0;
-        justify-content: center;
-        align-items: center;
+        width: 100%;
+        /* border: 1px solid white; */
     }
 
     .me {
-        min-width: 340px;
-        max-width: 340px;
+        width: 100%;
     }
 }
