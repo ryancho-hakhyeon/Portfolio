@@ -64,7 +64,6 @@
     word-wrap: break-word;
     hyphens: auto;
     box-shadow: #ffffff11 0px 1px 1px, #ffffff11 0px 2px 2px, #ffffff11 0px 4px 4px;
-    z-index: 5;
 }
 
 .skills__explanation div h3 {
