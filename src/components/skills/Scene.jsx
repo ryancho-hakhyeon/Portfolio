@@ -11,7 +11,7 @@ const Scene = () => {
       ]
       const options = {
         radius: 220,
-        direction: 195,
+        direction: 135,
         maxSpeed: 'normal',
         initSpeed: 'normal',
         keep: true

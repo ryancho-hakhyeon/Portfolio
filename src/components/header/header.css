@@ -161,7 +161,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
+    display: inline-block;
     border-radius: 28px;
     background: var(--color-primary);
     width: 56px;
@@ -188,7 +188,7 @@
 .me {
     display: block;
     margin-top: 1rem;
-    min-width: 500px;
+    width: 500px;
     max-height: 750px;
     perspective: 500px;
 }
@@ -302,10 +302,10 @@
 /* ============= BackSide Effects ============= */
 .card-box {
     position: absolute;
-    top: 20px;
-    bottom: 20px;
-    right: 20px;
-    left: 20px;
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
     border-radius: 15px;
     /* background: #2a2431; */
     display: flex;
@@ -398,7 +398,7 @@
 
     .explained__text {
         width: 400px;
-        min-width: 400px;
+        /* min-width: 400px; */
     }
 
     .explained__text-effect {
@@ -439,18 +439,18 @@
     }
 
     .me {
-        min-width: 400px;
+        width: 400px;
         height: 550px;
         margin-right: 1rem;
     }
 
-    .me-circle:hover {
+    /* .me-circle:hover {
         width: 320px;
     }
 
     .me-hide {
         margin-right: 5px;
-    }
+    } */
 
     .card-box .card-img {
         background-size: 400px;
@@ -471,10 +471,6 @@
     }
 
     .header__container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         width: var(--container-width-sm);
         /* border: 1px solid white; */
     }
@@ -484,10 +480,8 @@
     }
     
     .explained__me-box {
-        display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 100%;
         gap: 4rem;
         /* border: 1px solid white; */
     }
@@ -495,8 +489,7 @@
     .explained__text {
         margin: 0;
         padding: 0;
-        width: 200px;
-        /* border: 1px solid red; */
+        width: 100%;
     }
     
     .cta, .explained__text-effect, .text-me {
@@ -509,11 +502,15 @@
 
     .me {
         /* border: 1px solid burlywood; */
-        width: var(--container-width-sm);
-        display: flex;
+        /* display: inline-block; */
+        width: 100%;
     }
     
-    .me-img {
+    /* .me-img {
         width: var(--container-width-sm);
+    } */
+
+    .card-box .card-img {
+        object-fit: fill;
     }
 }
