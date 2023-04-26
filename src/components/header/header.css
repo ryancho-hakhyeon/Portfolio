@@ -65,26 +65,18 @@
     width: 500px;
 }
 
-.explained__text-effect {
-    text-shadow: 3px -5px 0 var(--color-primary), 3px 4px 0 var(--color-orange);
-    transition: var(--transition);
-    margin-top: 3rem;
-    /* min-width: 370px; */
-    width: 370px;
-}
-
-.explained__text-effect:hover {
-    font-style: italic;
-    color: var(--color-primary);
-    text-shadow: none;
-    font-size: 5.7rem;
-}
-
 .text-me {
     font-size: 5rem;
     line-height: 5rem;
     font-family: 'Kanit', sans-serif;
     transition: var(--transition);
+}
+
+.short-desc {
+    font-size: .8rem;
+    color: #b9b9b9;
+    font-family: 'Kanit', sans-serif;
+    line-height: .8rem;
 }
 
 .text-me span {
@@ -240,64 +232,6 @@
     inset -5px -5px 15px #ffffff26,
     5px 5px 15px #0000004C, -5px -5px 15px #ffffff26;
 }
-
-/* .me-slide {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: -15%;
-    left: -10%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.me-circle {
-    cursor: pointer;
-    padding-right: 10px;
-    background-color: white;
-    height: 60px;
-    width: 60px;
-    border-radius: 30px;
-    opacity: 0.5;
-    box-shadow: #32325d6f 0px 30px 60px -12px inset, #00000013 0px 18px 36px -18px inset;
-    transition: var(--transition);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border: 2px ridge white;
-}
-
-.me-icon {
-    margin-top: 8px;
-    transform: rotate(260deg);
-    font-size: 2rem;
-}
-
-.me-circle:hover {
-    transition: var(--transition);
-    border-radius: 30px;
-    width: 440px;
-}
-
-.me-hide {
-    opacity: 0;
-    text-transform: uppercase;
-    color: transparent;
-    width: 200px;
-    margin-right: 55px;
-    font-family: 'Archivo', sans-serif;
-    font-weight: 900;
-    font-size: 2.5rem;
-    justify-content: center;
-    letter-spacing: .3rem;
-    transition: opacity 2s ease-in-out;
-}
-
-.me-circle:hover .me-hide {
-    opacity: 1;
-    color: rgb(100, 95, 95);
-} */
 
 /* ============= BackSide Effects ============= */
 .card-box {

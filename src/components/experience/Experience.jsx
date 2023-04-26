@@ -3,7 +3,6 @@ import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 import { FaGithub } from 'react-icons/fa'
 
 import Sample_IMG from "../../assets/laptop.png"
-import Sample_MB from "../../assets/mobile2.png"
 import './experience.css'
 
 const project_data = [
@@ -11,8 +10,8 @@ const project_data = [
     project_title: 'Weather Forecast',
     image: ``,
     github_url: 'https://github.com/ryancho-hakhyeon/Weather-Forecast-app',
-    contents: "To predict and see weather by the location where you want to know and search. The application shows various locations as options that are able to choose from. Also, It displays different modes as Dashboard and Mobile versions, and the background and weather icons are changed by the time and weather conditions.",
-    technologies: ['React', 'Weather APIs', 'Geographic APIs']
+    contents: "To predict and see weather by the location where you are and where you want. The application shows various locations as options that are able to choose from. Also, It displays different modes as Dashboard and Web Application versions, and the background and weather icons are changed by the time and weather conditions.",
+    technologies: ['React', 'ChartJs', 'Weather APIs', 'Geographic APIs']
   },
   {
     project_title: 'Budget Dashboard',
@@ -25,8 +24,8 @@ const project_data = [
     project_title: 'Management Application',
     image: ``,
     github_url: 'https://github.com/ryancho-hakhyeon/Management',
-    contents: "Another full stack application with MEAN stack style to manage information under the web environments. This web application is able to access data through CRUD(Create, Read, Update, Delete) operations of persistent storage. It represents a clearly understandable UI that users must use for reading data, updating or editing data, and deleting data.",
-    technologies: ['Angular','Materials', 'Bootstrap', 'Express', 'NodeJS', 'MongoDB']
+    contents: "Another Full stack application with MERN stack style to manage Pill's information under the web environments. This web application is able to access data through CRUD(Create, Read, Update, Delete) operations of persistent storage. It represents a clearly understandable UI that users must use for reading data, updating or editing data, and deleting data.",
+    technologies: ['React','Redux toolkits', 'Bootstrap', 'Bootstrap-icon' , 'Express', 'NodeJS', 'MongoDB']
   },
   {
     project_title: 'Provisioning & CI/CD',
@@ -52,7 +51,6 @@ const Experience = () => {
                       <div className='project-item' key={ idx }>
                         <div className='project-img-container'>
                           <img src={ Sample_IMG } alt="sample" className='project-img laptop'/>
-                          <img src={ Sample_MB } alt="phone" className='project-img phone'/>
                         </div>
                         <a href={ data.github_url } target="_blank" without="true" rel="noopener noreferrer" className='btn btn-source'>Source Code<FaGithub className='icon-source'/></a>
                         <div className='project-details'>

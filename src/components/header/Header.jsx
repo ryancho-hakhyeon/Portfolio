@@ -38,10 +38,9 @@ const Header = () => {
         
         <div className='explained__me-box'>
           <div className='explained__text'>
-            <p className='text-me'><span>H</span><span>i</span><span>,</span></p>
             <p className='text-me'><span>I</span><span>'</span><span>m</span></p>
             <p className='text-me'><span>R</span><span>y</span><span>a</span><span>n</span> <span>C</span><span>h</span><span>o</span><span>,</span></p>
-            <p className='text-me explained__text-effect' onMouseEnter={ handleMouseEnter } onMouseLeave={ handleMouseLeave }>Junior Developer!</p>
+            <p className='text-me short-desc'>Junior Developer, who are passionate and enjoying new challenge. With a 2 years college studies about programming, interested in problem solving and </p>
 
             <Link to="/resume" state={{ loadingState: true }} >
               <div className='link-online-resume' >

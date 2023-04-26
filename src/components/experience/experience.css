@@ -108,13 +108,13 @@
     width: 800px;
 }
 
-.project-img.phone {
+/* .project-img.phone {
     position: absolute;
     height: 300px;
     width: 100px;
     right: 15rem;
     bottom: 20rem;
-}
+} */
 
 .project-item:nth-child(1) {
     transform: rotateY(0deg) translateZ(491px);
