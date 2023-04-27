@@ -19,8 +19,6 @@ const Header = () => {
 
   const filterOut = {
     transition: 'transform .5s ease',
-    filter: isHover ? 'grayscale(0%)' : 'grayscale(80%)',
-    transform: isHover ? 'scale(1.5)' : 'none',
   }
 
   return (
