@@ -133,7 +133,7 @@
 }
 
 .project-details {
-    padding: 1.7rem;
+    padding: 50px;
     border-radius: 20px;
     background-color: var(--color-bg-variant);
 }
@@ -179,14 +179,17 @@
 
 .project-details h2 {
     font-weight: bolder;
+    margin-bottom: 20px;
 }
 
 .project-details p {
     color: lightgrey;
+    margin-bottom: 20px;
 }
 
 .project-tech {
     color: var(--color-white) !important;
+    margin-bottom: 20px;
 }
 
 /* ============ Media Queries (Medium Devices) ============ */

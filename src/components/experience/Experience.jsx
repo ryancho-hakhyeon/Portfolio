@@ -25,7 +25,7 @@ const project_data = [
     image: ``,
     github_url: 'https://github.com/ryancho-hakhyeon/Management',
     contents: "Another Full stack application with MERN stack style to manage Pill's information under the web environments. This web application is able to access data through CRUD(Create, Read, Update, Delete) operations of persistent storage. It represents a clearly understandable UI that users must use for reading data, updating or editing data, and deleting data.",
-    technologies: ['React','Redux toolkits', 'Bootstrap', 'Bootstrap-icon' , 'Express', 'NodeJS', 'MongoDB']
+    technologies: ['React','Redux toolkits', 'Bootstrap', 'Express', 'NodeJS', 'MongoDB']
   },
   {
     project_title: 'Provisioning & CI/CD',
