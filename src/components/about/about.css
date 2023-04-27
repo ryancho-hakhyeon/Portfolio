@@ -169,7 +169,7 @@
 }
 
 .timeline-container.right .timeline-content {
-    padding: 13px 0px 13px 50px;
+    padding: 13px 20px 13px 45px;
     border-radius: 500px 0 0 500px;
 }
 
@@ -177,7 +177,7 @@
 
 .timeline-container .timeline-content h2 {
     margin-bottom: .5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.5rem;
     font-weight: bold;
     color: #006e51;
@@ -185,7 +185,7 @@
 
 .timeline-container .timeline-content p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.3rem;
     color: #000000;
 }
@@ -343,26 +343,26 @@
     }
 
     .timeline-container .timeline-content {
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         padding-right: 20px;
-        padding-left: 8px;
+        padding-left: 10px;
     }
 
     .timeline-container.right .timeline-content {
-        padding-top: 8px;
-        padding-bottom: 8px;
-        padding-right: 8px;
-        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        padding-left: 25px;
     }
 
     .timeline-container .timeline-content h2 {
-        font-size: .8rem;
-        line-height: 1rem;
+        font-size: .6rem;
+        line-height: .8rem;
     }
 
     .timeline-container .timeline-content p {
-        font-size: .8rem;
-        line-height: .8rem;
+        font-size: .5rem;
+        line-height: .7rem;
     }
 }

@@ -73,6 +73,10 @@
     text-align: center;
 }
 
+.skill-highlight {
+    color: #00fff0;
+}
+
 /* ============ Media Queries (Medium Devices) ============ */
 @media screen and (max-width: 1024px) {
     /* .skills__container {

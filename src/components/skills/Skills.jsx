@@ -16,17 +16,17 @@ const Skills = () => {
           <div className="skills__explanation">
               <div>
                 <h3><span>FrontEnd</span> Skills</h3>
-                <span>With experience of (Technologies - JavaScript and Python) and (Frameworks - React, Angular, etc.), to bulid responsive and interactive interfaces that run smoothly.</span>
+                <span>With experience of <span className='skill-highlight'>Technologies - JavaScript and Python</span> and <span className='skill-highlight'>Frameworks - React, Angular, etc.</span>, to bulid responsive and interactive interfaces that run smoothly.</span>
               </div>
 
               <div>
                 <h3><span>BackEnd</span> Skills</h3>
-                <span>Responsible for implementing the (server-side) of web application, using (Node.js) and (Flask) to build efficient backEnd systems.</span>
+                <span>Responsible for implementing the <span className='skill-highlight'>server-side</span> of web application, using <span className='skill-highlight'>Node.js</span> and <span className='skill-highlight'>Flask</span> to build efficient backEnd systems.</span>
               </div>
 
               <div>
                 <h3><span>Infrastructure</span></h3>
-                <span>With a strong understanding of database design and CI/CD design, to bulid the concept of smooth provisioning and engineering. </span>
+                <span>With a strong understanding of <span className='skill-highlight'>database design</span> and <span className='skill-highlight'>CI/CD design</span>, to bulid the concept of smooth provisioning and engineering. </span>
               </div>
           </div>
       </div>

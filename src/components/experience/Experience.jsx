@@ -41,7 +41,7 @@ const Experience = () => {
 
   return (
     <section id='experience'>
-        <h5> My Works </h5>
+        <h5> I've been working on </h5>
         <h2> Projects </h2>
         <div className='container myworks__container'>
             <div className='projects-container' style={ {transform: `translateZ(-491px) rotateY(${degree}deg)`}}>
