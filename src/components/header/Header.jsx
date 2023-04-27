@@ -11,16 +11,7 @@ import { BsPhone } from 'react-icons/bs'
 import { AiOutlineMail } from 'react-icons/ai'
 
 const Header = () => {  
-  const [isHover, setIsHover] = useState(false)
   const [isClick, setIsClick] = useState(false)
-  
-  const handleMouseEnter = () => {
-    setIsHover(true)
-  }
-
-  const handleMouseLeave = () => {
-    setIsHover(false)
-  }
 
   const handleClick = () => {
     setIsClick(!isClick)
@@ -40,7 +31,7 @@ const Header = () => {
           <div className='explained__text'>
             <p className='text-me'><span>I</span><span>'</span><span>m</span></p>
             <p className='text-me'><span>R</span><span>y</span><span>a</span><span>n</span> <span>C</span><span>h</span><span>o</span><span>,</span></p>
-            <p className='text-me short-desc'>Junior Developer, who are passionate and enjoying new challenge. With a 2 years college studies about programming, interested in problem solving and </p>
+            <p className='text-me short-desc'>Junior Developer, who are passionate and enjoying new challenge. With a 2 years studies about programming, interested in problem solving and </p>
 
             <Link to="/resume" state={{ loadingState: true }} >
               <div className='link-online-resume' >
