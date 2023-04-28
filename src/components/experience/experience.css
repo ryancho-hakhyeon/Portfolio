@@ -238,7 +238,7 @@
 @media screen and (max-width: 600px) {
     #experience {
         height: 100%;
-        margin-bottom: 10rem;
+        margin-bottom: 20rem;
     }
 
     .myworks__container {
@@ -255,6 +255,10 @@
     
     .projects-container {
         width: 100%;
+    }
+
+    .project-details {
+        padding: 30px;
     }
 
     .prev, .next {
