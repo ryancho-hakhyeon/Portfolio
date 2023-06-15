@@ -185,169 +185,215 @@
 }
 
 /* ==================== Me Image Effects ==================== */
-.me {
-    display: block;
-    margin-top: 1rem;
+.cards {
+    /* border: 1px solid white; */
     width: 500px;
-    max-height: 750px;
-    perspective: 500px;
-}
-
-.me-img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transform-origin: center right;
-    transition: transform 1s;
-}
-
-.me-img.is-flipped {
-    /* transform: rotateY(0.5turn); */
-    transform: translateX(-100%) rotateY(-180deg);
-}
-
-.img-face, .front-side.img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    -webkit-box-reflect: below 5px linear-gradient(transparent 70%, transparent, rgba(0, 0, 0, 0.2));
-}
-
-.front-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .5s ease;
-    /* position: relative; */
-}
-
-.back-side {
-    padding: 2rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    /* background-color: #2a2438; */
-    transform: rotateY(180deg);
-    color: black;
-    box-shadow: inset 5px 5px 5px #00000038,
-    inset -5px -5px 15px #ffffff26,
-    5px 5px 15px #0000004C, -5px -5px 15px #ffffff26;
-}
-
-/* ============= BackSide Effects ============= */
-.card-box {
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    right: 10px;
-    left: 10px;
+    height: 680px;
+    display: block;
+    background-size: cover;
+    float: left;
     border-radius: 15px;
-    /* background: #2a2431; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     overflow: hidden;
-    transition: var(--transition);
+    background-position: center;
+    margin: 10px;
 }
 
-.card-box .card-img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+.img__me {
+    max-width: 100%;
     height: 100%;
-    width: 100%;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: 0.8s ease-in-out;
-    background: url('../../assets/me-about.jpg') center center no-repeat;
-    background-size: 600px;
 }
 
-.card-box .card-img:hover {
-    background: url('../../assets/me-about.jpg') left center no-repeat;
-    background-size: 800px;
+.cards__me {
+    position: relative;
+    /* z-index: 10; */
 }
 
-.card-box .card-border {
-    border: 1px solid white;
-    border-radius: 15px;
+.cards__me:hover .cards__me__react-1 {
+    left: 15%;
+}
+
+.cards__me:hover .cards__me__react-1 .react-1__shadow {
+    left: -20%;
+}
+
+.cards__me:hover .cards__me__react-2 {
+    left: 70%;
+}
+
+.cards__me:hover .cards__me__react-2::before {
+    left: -100%;
+}
+
+.cards__me:hover .cards__me__react-2::after {
+    left: 100%;
+}
+
+.cards__me:hover .cards__me__react-2 .react-2__shadow {
+    left: -10%;
+}
+
+.cards__me:hover .cards__me__circle {
+    transform: scale(1);
+}
+
+.cards__me:hover .cards__me__circle::before {
+    transform: scale(0.9);
+}
+
+.cards__me:hover .cards__me__list li {
+    transform: translateX(0);
+}
+
+.cards__me:hover .cards__me__list li:hover {
+    cursor: pointer;
+}
+
+.cards__me__react-1 {
+    background: #fff;
+    width: 250px;
+    height: 110px;
+    transform: skewX(-20deg);
+    display: block;
     position: absolute;
-    top: 20px;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    opacity: 0;
-    transition: var(--transition);
+    top: 75%;
+    opacity: 0.9;
+    left: -100%;
+    /* z-index: 8; */
+    transition: all 0.5s ease-in;
 }
 
-.card-text {
-    position: absolute;
-    top: 3rem;
-    left: 3.5rem;
-    color: var(--color-white);
-    font-size: 3rem;
+.cards__me__react-1 p {
+    font-size: 20px;
     font-weight: bolder;
-    opacity: 0;
-    transition: var(--transition);
+    color: #fff;
+    transform: skewX(20deg);
+    line-height: 6rem;
 }
 
-.card-box .card-img:hover > .card-border,
-.card-box .card-img:hover > .card-text,
-.card-box .card-img:hover > .card-phone,
-.card-box .card-img:hover > .card-email {
+.cards__me__react-1 .react-1__shadow {
+    background: #9b1308;
+    width: 280px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    left: -200%;
+    top: -5%;
+    z-index: -1;
+    transition: all 0.3s ease-in;
+}
+
+.cards__me__react-2 {
+    width: 100px;
+    height: 70px;
+    background: #fff;
+    position: absolute;
+    top: 60%;
+    left: 1000%;
+    opacity: 0.9;
+    transform: skewX(-20deg);
+    /* z-index: 8; */
+    transition: all 0.5s ease-in;
+}
+
+.cards__me__react-2::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 40px;
+    background: #57ccfd;
     opacity: 1;
-}
-
-.card-text,
-.card-box .card-img .card-phone,
-.card-box .card-img .card-email {
-    filter: drop-shadow(2px 2px 2px #000);
-}
-
-.card-box .card-img .card-phone {
     position: absolute;
-    bottom: 8.5rem;
-    left: 3rem;
-    font-size: 2.5rem;
-    color: var(--color-white);
-    opacity: 0;
-    transition: var(--transition);
+    left: 500%;
+    top: 10%;
+    transition: all 0.3s ease-in;
 }
 
-.card-box .card-img .card-email {
+.cards__me__react-2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 40px;
+    background: #9b1308;
+    opacity: 1;
     position: absolute;
-    bottom: 4.5rem;
-    left: 3rem;
-    font-size: 2.5rem;
-    color: var(--color-white);
-    opacity: 0;
-    transition: var(--transition);
+    left: 500%;
+    top: 150%;
+    transition: all 0.5s ease-in;
+    transition-delay: 0.2s;
 }
 
-.card-box .card-img .card-phone::after {
-    content: "6043498194";
+.cards__me__react-2 .react-2__shadow {
+    background: #57ccfd;
+    width: 100%;
+    height: 100%;
+    display: block;
     position: absolute;
-    bottom: 1.1rem;
-    left: 3.8rem;
-    font-size: 1.5rem;
+    top: -10%;
+    left: 500%;
+    transition: all 0.5s ease-in;
+    transition-delay: 0.2s;
 }
 
-.card-box .card-img .card-email::after {
-    content: "ryancho.hakhyeon/GMAIL";
+.cards__me__circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #fff;
     position: absolute;
-    left: 3.8rem;
-    bottom: 1.3rem;
-    /* color: var(--color-white); */
-    font-size: 1.5rem;
+    top: -15%;
+    left: 50%;
+    opacity: 0.9;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.cards__me__circle::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #9b1308;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    transition-delay: 0.2s;
+}
+
+.cards__me__list {
+    list-style: none;
+    position: absolute;
+    top: -9px;
+    right: 90px;
+    padding-top: 60px;
+    transition: all 0.4s ease;
+}
+
+.cards__me__list li {
+    display: inline-block;
+    margin: 5px;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background: rgba(87, 204, 253, 0.9);
+    text-align: center;
+    line-height: 1.7rem;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    transform: translateX(800%);
+}
+
+.cards__me__list li:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.cards__me__list li:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.cards__me__list li:nth-child(3) {
+    transition-delay: 0.4s;
 }
 
 /* ============ Media Queries (Medium Devices) ============ */
@@ -403,27 +449,23 @@
     .cta {
         margin-top: 2.5rem;
     }
-
-    .me {
-        width: 400px;
-        height: 550px;
-        margin-right: 1rem;
-    }
-
-    .card-box .card-img {
-        background-size: 400px;
-    }
-
-    .card-box .card-img:hover {
-        background-size: 600px;
-    }
-
+    
     .short-desc-box {
         width: 350px;
     }
 
     .short-desc {
         font-size: .8rem;
+    }
+
+    /* ==================== Me Image Effects ==================== */
+    .cards__me__list {
+        top: -20px;
+        right: 65px;
+    }
+
+    .cards__me__list li {
+        margin: 8px;
     }
 }
 
@@ -466,19 +508,6 @@
         font-size: 3.2rem;
     }
 
-    .me {
-        width: 100%;
-    }
-
-    .card-box .card-img {
-        object-fit: fill;
-    }
-
-    .card-box .card-img .card-phone::after,
-    .card-box .card-img .card-email::after {
-        font-size: 1rem;
-    }
-
     .short-desc-box {
         width: 330px;
     }
@@ -503,5 +532,56 @@
         50% {
             transform: translateY(5px)
         }
+    }
+
+    /* ==================== Me Image Effects ==================== */
+    .cards {
+        width: 330px;
+        height: 500px;
+    }
+
+    .cards__me__react-1 {
+        width: 200px;
+        height: 70px;
+    }
+
+    .cards__me__react-1 .react-1__shadow {
+        width: 205px;
+        height: 60px;
+    }
+
+    .cards__me:hover .cards__me__react-1 .react-1__shadow {
+        left: -10%;
+    }
+
+    .cards__me__react-1 p {
+        font-size: 15px;
+        line-height: 3rem;
+    }
+
+    .cards__me__react-2 {
+        width: 70px;
+        height: 40px;
+    }
+
+    .cards__me__react-2::before {
+        width: 35px;
+        height: 30px;
+        top: 50%;
+    }
+
+    .cards__me__react-2::after {
+        width: 35px;
+        height: 30px;
+    }
+
+    .cards__me__circle {
+        width: 170px;
+        height: 170px;
+    }
+
+    .cards__me__list {
+        top: -30px;
+        right: 30px;
     }
 }

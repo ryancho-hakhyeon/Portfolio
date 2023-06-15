@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 import './header.css'
@@ -6,16 +6,12 @@ import CTA from './CTA'
 import IMG from '../../assets/me.jpg'
 import HeaderSocial from './HeaderSocials'
 
-// import { FaLocationArrow } from 'react-icons/fa'
-import { BsPhone } from 'react-icons/bs'
-import { AiOutlineMail, AiOutlineArrowRight } from 'react-icons/ai'
+import { AiOutlineArrowRight } from 'react-icons/ai'
+import { BsLinkedin } from 'react-icons/bs'
+import { FaGithub } from 'react-icons/fa'
+import { SiMinutemailer } from 'react-icons/si'
 
 const Header = () => {  
-  const [isClick, setIsClick] = useState(false)
-
-  const handleClick = () => {
-    setIsClick(!isClick)
-  }
 
   return (
     <section id='header'>
@@ -46,29 +42,22 @@ const Header = () => {
             <CTA/>
           </div>
 
-          <div className="me" onClick={handleClick}>
-            <div className={`me-img ${isClick ? 'is-flipped' : ''}`}>
-              <div className='img-face front-side'>
-                <img src={IMG} alt='me'/>
-              </div>
-
-              <div className='img-face back-side'>
-                <div className='card-box'>
-                  <div className='card-img'>
-                    <div className="card-border"></div>
-                    <span className='card-text'>Ryan Cho</span>
-                    
-                    <div className='card-phone'>
-
-                      <BsPhone className='card-phone-icon' />
-                    </div>
-                    <div className='card-email'>
-                      <AiOutlineMail className='card-email-icon' />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Profile Image card */}
+          <div className='cards cards__me'>
+            <img src={IMG} alt="" className='img__me'/>
+            <span className='cards__me__react-1'>
+              <span className='react-1__shadow'></span>
+              <p>Ryan Hakhyeon Cho</p>
+            </span>
+            <span className='cards__me__react-2'>
+              <span className='react-2__shadow'></span>
+            </span>
+            <span className='cards__me__circle'></span>
+            <ul className='cards__me__list'>
+              <li><BsLinkedin /></li>
+              <li><FaGithub /></li>
+              <li><SiMinutemailer /></li>
+            </ul>
           </div>
         </div>
         

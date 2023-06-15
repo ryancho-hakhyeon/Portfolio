@@ -118,7 +118,24 @@ const Resume = () => {
                 :
                 (
                     <>
+                    <div className='resume__header'>
+                        <a href={CV} download className="cv_button" >
+                            <span>DownLoad CV</span>
+                            <em></em>
+                        </a>
+                        <Link to='/'>
+                            <div className="cv_button go_home" >
+                                <span>Go Home</span>
+                                <em></em>
+                            </div>
+                        </Link>
+
+                        
+                            
+                    </div>
+
                     <div className='resume__container'>
+
                         <div className="container__left">
                             <div className='profile_skills_box'>
                                 <div className="profile__container">
@@ -195,7 +212,7 @@ const Resume = () => {
                                 </div>
                             </div>
                             
-                            <div className="cv__container" >
+                            {/* <div className="cv__container" >
                                 <a href={CV} download className="cv_button">
                                     <span>DownLoad CV</span>
                                     <em></em>
@@ -207,7 +224,7 @@ const Resume = () => {
                                         <em></em>
                                     </div>
                                 </Link>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="container__right">
