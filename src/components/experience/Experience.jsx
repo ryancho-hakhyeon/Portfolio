@@ -2,11 +2,10 @@ import React, { useState } from 'react'
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 import { FaGithub } from 'react-icons/fa'
 
-// 
 import Weather from '../../assets/weather.png'
 import CityStudio from '../../assets/city_studio.png'
 import Singular from '../../assets/singular_hearing.png'
-import Sample_IMG from "../../assets/laptop.png"
+// import Sample_IMG from "../../assets/laptop.png"
 
 import './experience.css'
 
@@ -31,13 +30,6 @@ const project_data = [
     url: 'https://www.youtube.com/watch?v=o1QyyBPeFL4',
     contents: "Developing the web application to improve the backend and frontend parts. Mostly, I contributed the frontend that users are able to use easily. As the results of that, the visualizing of the application became more understandable and clear.",
     technologies: ['JavaScript', 'Linux', 'Network']
-  },
-  {
-    project_title: 'Provisioning & CI/CD',
-    image: Sample_IMG,
-    url: '',
-    contents: "Understanding automatic management of infrastructure by using cloud computing. This application simply shows the basic setup and procedure for managing web-based applications in the current industry's field used.",
-    technologies: ['AWS', 'Azure', 'Docker', 'GitLab', 'Discord', 'Ubuntu', 'Ansible', 'Github']
   }
 ]
 
@@ -78,11 +70,11 @@ const Experience = () => {
             </div>
 
             <div className='nav'>
-                <button className='prev' onClick={() => setDegree(degree - 90)}>
+                <button className='prev' onClick={() => setDegree(degree - 120)}>
                   <IoIosArrowBack className='nav-icon'/>
                 </button>
 
-                <button className='next' onClick={() => setDegree(degree + 90)}>
+                <button className='next' onClick={() => setDegree(degree + 120)}>
                   <IoIosArrowForward className='nav-icon' />
                 </button>
             </div>

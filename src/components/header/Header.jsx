@@ -54,9 +54,9 @@ const Header = () => {
             </span>
             <span className='cards__me__circle'></span>
             <ul className='cards__me__list'>
-              <li><BsLinkedin /></li>
-              <li><FaGithub /></li>
-              <li><SiMinutemailer /></li>
+              <a href='https://www.linkedin.com/in/ryan-hakhyeon-cho/' target="_black"><li><BsLinkedin /></li></a>
+              <a href='https://github.com/ryancho-hakhyeon' target="_black"><li><FaGithub /></li></a>
+              <a href='#contact'><li><SiMinutemailer /></li></a>
             </ul>
           </div>
         </div>

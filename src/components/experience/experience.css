@@ -121,16 +121,16 @@
 }
 
 .project-item:nth-child(2) {
-    transform: rotateY(90deg) translateZ(491px);
+    transform: rotateY(120deg) translateZ(491px);
 }
 
 .project-item:nth-child(3) {
-    transform: rotateY(180deg) translateZ(491px);
+    transform: rotateY(240deg) translateZ(491px);
 }
 
-.project-item:nth-child(4) {
+/* .project-item:nth-child(4) {
     transform: rotateY(270deg) translateZ(491px);
-}
+} */
 
 .project-details {
     padding: 50px;
