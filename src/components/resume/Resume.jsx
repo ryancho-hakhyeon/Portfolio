@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './resume.css';
 import Loads from '../loads/Loads';
 import AboutMe from '../../assets/me-about.jpg'
-import CV from '../../assets/Ryan Hakhyeon Cho Resume.pdf'
+import CV from '../../assets/Ryan Hakhyeon Cho Resume with Cover Letter.pdf'
 
 import { IoMdMail } from 'react-icons/io';
 import { MdSchool } from 'react-icons/md';
