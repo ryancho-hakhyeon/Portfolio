@@ -11,7 +11,7 @@ import { MdSchool } from 'react-icons/md';
 import { FaBriefcase, FaCertificate } from 'react-icons/fa';
 import { AiFillHome } from 'react-icons/ai';
 import { GiEarthAmerica } from 'react-icons/gi';
-import { BsPeopleFill, BsTelephoneFill, BsCalendar4Range } from 'react-icons/bs'
+import { BsPeopleFill, BsTelephoneFill, BsCalendar4Range, BsDot, BsCheck2Circle } from 'react-icons/bs'
 import { GrPersonalComputer, GrCertificate } from 'react-icons/gr'
 
 
@@ -30,8 +30,8 @@ const info_data = {
     },
     skills: {
         programing: ['Python,', 'Javascript'],
-        backend_frontend: ['React,', 'Angular,', 'Node.js,', 'express.js,', 'HTML/CSS,', 'MySQL,', 'mongodb,', 'Flask,', 'Chart.js,', 'JSON & APIs'],
-        infrastructure: ['Ansible,', 'Docker,', 'Kubernetes,', 'AWS,', 'Azure,', 'Unbuntu,', 'Jenkins,', 'Jira,', 'Data-Analysis libraries,'],
+        backend_frontend: ['React,', 'Angular,', 'Node.js,', 'express.js,', 'HTML/CSS,', 'MySQL,', 'mongodb,', 'Flask,', 'Chart.js,', 'JSON & Restful APIs'],
+        infrastructure: ['Ansible,', 'Docker,', 'Kubernetes,', 'AWS,', 'Azure,', 'Unbuntu,', 'Jenkins,', 'Jira,', 'Data-Analysis libraries, R, Tableau'],
         languague: [
             {
                 languague: 'English',
@@ -49,25 +49,27 @@ const info_data = {
             title: 'Software Development',
             company: 'Singular Hearing',
             period: 'Sep 2021 - Dec 2021',
-            descriptions: ['Improved the back-end more robust by the port-specific and the web server such as Nginx', 'Developed features - Added various modes selection, Added a progress bar when the audio file is denoised, Displayed each type of denoised audio result which is downloadable, and Compared them with the original file.']
+            descriptions: ['A 5-sprint client project for BCIT, ISSP(Industry Sponsored Student Project) Practicum.', 'Tools: JavaScript, Linux, Git', 'Improved the back-end more robust by the port-specific and the web server such as Nginx.', 'Developed features - Added various modes selection, Added a progress bar when the audio file is denoised, Displayed each type of denoised audio result that is downloadable, and Compared them with the original file.'],
+            linkURL: ['https://www.youtube.com/watch?v=o1QyyBPeFL4']
         },
         {
             title: 'Software Development',
             company: 'CityStudio Vancouver',
             period: 'Jan 2021 - Apr 2021',
-            descriptions: ['Developed an application for collecting data - https://citystudiovancouver.com/projects/pycity/', 'Implemented each city’s APIs which are given to grab published data.', 'Designed all collected data into an excel file sequentially by year and location.']
+            descriptions: ['A 5-sprint client project for BCIT, ISSP(Industry Sponsored Student Project) Practicum.', 'Tools: Python, APIs, JSON', 'Built an application for collecting data.', 'Implemented each city’s APIs which are given to grab published data.', 'Saved all collected data into an Excel file sequentially by year and location.'],
+            linkURL: ['https://citystudiovancouver.com/projects/pycity/']
         },
         {
             title: 'Designing CI/CD Environment & Provisioning',
             company: 'BCIT project',
             period: 'Jan 2021 - Dec 2021',
-            descriptions: ['Designed the CI/CD environment system through GitLab and Jenkins.', 'Implemented real-time notification using Discord.', 'Implemented a common CI/CD environment in multiple projects which is completely separated.']
+            descriptions: ['Tools: Jenkins, Gitlab, Docker, kubernetes, Azure, Linux, Python', 'Designed the CI/CD environment system through GitLab and Jenkins.', 'Implemented real-time notice using Discord', 'Implemented a common CI/CD environment in multiple projects which is completely separated.']
         },
         {
             title: 'Developing game application and Data Analysis',
             company: 'BCIT project',
             period: 'Sep 2020 - Dec 2021',
-            descriptions: ['Maze game written in Python and hang-man, whack-a-mole written in JavaScript in MVC concept.', 'Implemented position shuffling using random number generator, arrays, and images.', 'Analyzed several databases and determined the best analysis and prediction.', 'Designed object-oriented design in order for developing audio library etc.']
+            descriptions: ['Several flash games with MVC framework for youth in Python and JavaScript.', 'Designed object-oriented structure in order to develop an application such as audio library and etc.', 'Scraping data from general website by using crawling Python libraries to analyze prices and etc.', 'Visualized and determined the prediction from organized datasets - Python libraries, Tableau, etc.']
         },
         {
             title: 'First Lieutenant',
@@ -78,10 +80,17 @@ const info_data = {
     ],
     education: [
         {
+            organization: 'Amazon Web Services',
+            years: '2023',
+            program: 'AWS Certificated Cloud Practioner Foundational',
+            descriptions: ['Amazon Web Services Training and Certification'],
+            linkURL: ['https://www.credly.com/badges/da4e2591-5df4-4550-8517-f1f71a82b60b/public_url']
+        },
+        {
             organization: 'FreeCodeCamp',
             years: '2022',
             program: 'Scientific Computing with Python & JavaScript Algorithms and Data Structure & Data Analysis with Python',
-            descriptions: ''
+            descriptions: ['']
         },
         {
             organization: 'British Columbia Institute of Technology',
@@ -128,14 +137,10 @@ const Resume = () => {
                                 <span>Go Home</span>
                                 <em></em>
                             </div>
-                        </Link>
-
-                        
-                            
+                        </Link> 
                     </div>
 
                     <div className='resume__container'>
-
                         <div className="container__left">
                             <div className='profile_skills_box'>
                                 <div className="profile__container">
@@ -211,20 +216,6 @@ const Resume = () => {
                                     </div>
                                 </div>
                             </div>
-                            
-                            {/* <div className="cv__container" >
-                                <a href={CV} download className="cv_button">
-                                    <span>DownLoad CV</span>
-                                    <em></em>
-                                </a>
-                                
-                                <Link to='/'>
-                                    <div className="cv_button">
-                                        <span>Go Home</span>
-                                        <em></em>
-                                    </div>
-                                </Link>
-                            </div> */}
                         </div>
 
                         <div className="container__right">
@@ -237,13 +228,18 @@ const Resume = () => {
 
                             <div className="experience__container">
                                 <h2 className='title-txt'><FaBriefcase className='icon-img'/>Experiences</h2>
-                                { info_data.experience.map(({title, company, period, descriptions}, idx) => {
+                                { info_data.experience.map(({title, company, period, descriptions, linkURL }, idx) => {
                                     return (
                                         <div className='experience-box' key={ idx }>
-                                            <h3 className='subtitle-txt'><GrPersonalComputer className='sub-icon'/>{ title } - { company }</h3>
-                                            <p className='period-box'><BsCalendar4Range className='sub-icon'/>{ period }</p>
+                                            { linkURL ? 
+                                                <h3 className='subtitle-txt'><GrPersonalComputer className='sub-icon'/>
+                                                <a className='subtitle-link' href={ linkURL } target='_blank' rel="noopener noreferrer">{ title } - { company } <BsCheck2Circle/></a> 
+                                                <span className='period-box'><BsCalendar4Range className='sub-icon'/>{ period }</span></h3> 
+                                                : 
+                                                <h3 className='subtitle-txt'><GrPersonalComputer className='sub-icon'/>{ title } - { company } <span className='period-box'><BsCalendar4Range className='sub-icon'/>{ period }</span></h3> 
+                                            }
                                             { descriptions.map((desc, idx) => {
-                                                return <p key={ idx }>{ desc }</p>
+                                                return <p key={ idx }><BsDot /> { desc }</p>
                                             }) }
                                         </div>
                                     )
@@ -253,10 +249,17 @@ const Resume = () => {
                             <div className="education__container">
                                 <h2 className='title-txt'><MdSchool className='icon-img'/>Education & Certificates</h2>
 
-                                { info_data.education.map(({organization, years, program, descriptions}, idx) => {
+                                { info_data.education.map(({organization, years, program, descriptions, linkURL}, idx) => {
                                     return (
                                         <div className='education-box' key={ idx }>
-                                            <h3 className='subtitle-txt'><GrCertificate className='sub-icon' />{ organization } - { years }</h3>
+                                            {
+                                                linkURL ? 
+                                                <a className='subtitle-link' href={ linkURL } target='_blank' rel="noopener noreferrer">
+                                                    <h3 className='subtitle-txt'><GrCertificate className='sub-icon' />{ organization } - { years } <BsCheck2Circle/></h3>
+                                                </a>
+                                                :
+                                                <h3 className='subtitle-txt'><GrCertificate className='sub-icon' />{ organization } - { years }</h3>
+                                            }
                                             <p className='program-title-txt'>{ program }</p>
                                             { descriptions !== '' ? descriptions.map((desc, idx) => {
                                                 return (

@@ -80,6 +80,15 @@ const About = () => {
                 </div>
                 
                 <div className='about__timeline'>
+                    <div className={`timeline-container left ${isEducation || isExperience ? "activate" : ""}`}>
+                        <div className={`date ${isCertificate ? "activate" : ""}`}>Oct 2023</div>
+
+                        <div className="timeline-content">
+                            <h2>Amazon Web Services</h2>
+                            <p>AWS Certificated Cloud Practitioner</p>
+                        </div>
+                    </div>
+
                     <div className={`timeline-container right ${isEducation || isExperience ? "activate" : ""}`}>
                         <div className={`date ${isCertificate ? "activate" : ""}`}>Jul 2022</div>
 
@@ -130,7 +139,7 @@ const About = () => {
 
                         <div className="timeline-content">
                             <h2>First Lieutenant</h2>
-                            <p>Work at Korea Army</p>
+                            <p>Human Resources Department</p>
                         </div>
                     </div>
 

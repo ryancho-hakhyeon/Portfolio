@@ -7,7 +7,7 @@
     opacity: 0;
     animation: fadein 500ms ease 200ms forwards;
     /* border: 1px solid white; */
-    width: 1200px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,11 +37,11 @@
 }
 
 .prev {
-    left: 4rem;
+    left: 10%;
 }
 
 .next {
-    right: 4rem;
+    right: 10%;
 }
 
 .prev:hover, .next:hover {
@@ -107,14 +107,6 @@
     height: 500px;
     width: 800px;
 }
-
-/* .project-img.phone {
-    position: absolute;
-    height: 300px;
-    width: 100px;
-    right: 15rem;
-    bottom: 20rem;
-} */
 
 .project-item:nth-child(1) {
     transform: rotateY(0deg) translateZ(491px);
@@ -199,7 +191,7 @@
         margin-bottom: 10rem;
     }
     .myworks__container {
-        width: 1000px;
+        width: 100%;
     }
 
     .projects-container {
@@ -231,6 +223,14 @@
     .tech-item {
         font-size: .8rem;
         margin-left: .5rem;
+    }
+
+    .prev {
+        left: 4rem;
+    }
+    
+    .next {
+        right: 4rem;
     }
 }
 

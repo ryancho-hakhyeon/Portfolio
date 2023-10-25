@@ -23,16 +23,18 @@ const Contact = () => {
         <div className="contact__options">
           <article className='contact__option'>
             <MdOutlineEmail className='contact__option-icon'/>
-            <h4>Email</h4>
-            <h5>ryancho.hakhyeon@gmail.com</h5>
+            <h4>G-Mail (Email)</h4>
+            <h5>ryancho.hakhyeon@</h5>
             <a href="mailto:ryancho.hakhyeon@gmail.com" rel="noopener noreferrer" target="_blank">Send a Message</a>
           </article>
+
           <article className='contact__option'>
             <RiMessengerLine className='contact__option-icon'/>
             <h4>Discord</h4>
             <h5>RyanCho#9397</h5>
             <a href="https://discordapp.com/channels/@me/9397/" rel="noopener noreferrer" target="_blank">Send a Message</a>
           </article>
+
           <article className='contact__option'>
             <RiMessengerLine className='contact__option-icon'/>
             <h4>WhatsApp</h4>

@@ -223,6 +223,8 @@
 .period-box {
     color: #009688;
     font-weight: bold;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .education-box p {
@@ -242,7 +244,17 @@
 }
 
 .subtitle-txt {
+    display: flex;
+    font-weight: bold;
     margin-top: 10px;
+}
+
+.subtitle-link {
+    color: #5c5470;
+}
+
+.subtitle-link:hover {
+    color: #009688;
 }
 
 .program-title-txt {

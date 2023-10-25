@@ -176,17 +176,17 @@
 /* =========================== TimeLine Text CSS =========================== */
 
 .timeline-container .timeline-content h2 {
-    margin-bottom: .5rem;
+    margin-bottom: .4rem;
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
     font-weight: bold;
     color: #006e51;
 }
 
 .timeline-container .timeline-content p {
     margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.3rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
     color: #000000;
 }
 
@@ -219,11 +219,6 @@
     color: val(--color-light);
 }
 
-/* .about__content p {
-    margin: 2rem 0 0.5rem;
-    color: var(--color-light);
-} */
-
 /* ============ Media Queries (Medium Devices) ============ */
 @media screen and (max-width: 1024px) {
     #about {
@@ -252,13 +247,13 @@
     }
 
     .timeline-container .timeline-content h2 {
-        font-size: 1rem;
-        line-height: 1.2rem;
+        font-size: .9rem;
+        line-height: .9rem;
     }
 
     .timeline-container .timeline-content p {
-        font-size: 0.9rem;
-        line-height: 1rem;
+        font-size: .8rem;
+        line-height: .8rem;
     }
 
     .timeline-container .timeline-content {
@@ -314,14 +309,6 @@
         display: none;
     }
 
-    .about__content {
-        text-align: center;
-    }
-
-    .about__content p {
-        margin: 1rem 0;
-    }
-
     .about__timeline {
         width: 100%;
     }
@@ -357,12 +344,12 @@
     }
 
     .timeline-container .timeline-content h2 {
-        font-size: .6rem;
+        font-size: .8rem;
         line-height: .8rem;
     }
 
     .timeline-container .timeline-content p {
-        font-size: .5rem;
+        font-size: .7rem;
         line-height: .7rem;
     }
 }
