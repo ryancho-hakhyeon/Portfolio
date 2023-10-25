@@ -1,5 +1,5 @@
 import React from 'react'
-import CV from '../../assets/Ryan Hakhyeon Cho Resume.pdf'
+import CV from '../../assets/Ryan Hakhyeon Cho Resume with Cover Letter.pdf'
 
 const CTA = () => {
   return (
