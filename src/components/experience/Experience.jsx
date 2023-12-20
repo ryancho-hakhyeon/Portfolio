@@ -30,7 +30,7 @@ const project_data = [
     url: 'https://www.youtube.com/watch?v=o1QyyBPeFL4',
     contents: "Developing the web application to improve the backend and frontend parts. Mostly, I contributed the frontend that users are able to use easily. As the results of that, the visualizing of the application became more understandable and clear.",
     technologies: ['JavaScript', 'Anaconda', 'Network']
-  }
+  },
 ]
 
 const Experience = () => {

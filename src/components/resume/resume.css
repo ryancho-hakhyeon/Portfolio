@@ -215,9 +215,10 @@
     hyphens: auto;
 }
 
-.experience-box p {
+.experience-box p, .education-box p {
     margin-top: 0;
     margin-bottom: 5px;
+    font-size: 0.9rem;
 }
 
 .period-box {
@@ -225,6 +226,7 @@
     font-weight: bold;
     margin-left: auto;
     margin-right: 0;
+    font-size: 1rem;
 }
 
 .education-box p {
@@ -247,6 +249,7 @@
     display: flex;
     font-weight: bold;
     margin-top: 10px;
+    font-size: 1em;
 }
 
 .subtitle-link {
@@ -305,6 +308,10 @@
     .cv_button {
         width: 250px;
     }
+
+    .period-box {
+        font-size: 0.8rem;
+    }
 }
 
 /* ============ Media Queries (Small Devices) ============ */
@@ -351,14 +358,44 @@
     }
 
     .title-txt {
-        line-height: 2.5rem;
+        font-size: 1.2rem !important;
+        line-height: 2rem;
     }
 
     .subtitle-txt {
         line-height: 1.5rem;
+        font-size: 0.8rem;
+        display: grid;
+        grid-template-columns: 1;
+        gap: 0;
+    }
+
+    .education-box .subtitle-txt {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .subtitle-txt div {
+        display: flex-inline;
+        margin: 0;
+        padding: 0;
     }
 
     .period-box {
-        padding-top: 5px;
+        font-size: 0.6rem;
+        width: 100%;
     }
+
+    .sub-icon {
+        font-size: 0.7rem !important;
+    }
+
+    .skills-box span,
+    .summary-box,
+    .experience-box p, 
+    .education-box p {
+        font-size: 0.8rem;
+    }
+
 }

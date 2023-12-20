@@ -75,7 +75,7 @@ const info_data = {
             title: 'First Lieutenant',
             company: 'Korea Army',
             period: 'Mar 2012 - Jun 2014',
-            descriptions: ['As a head of the human resource department, managed over hundred units and made up the schedule of the base.', 'Collaborated with other departments, units, and government agencies to achieve operation.']
+            descriptions: ['Managed the unit’s schedule and human resources in order to achieve the missions.', 'Cooperated with other departments, for instance, the government or the next higher command.', 'Supported battalion commander to be well-employed in the unit', 'Led over a hundred units and HR department as the head of HR in the unit(battalion)']
         }
     ],
     education: [
@@ -90,7 +90,7 @@ const info_data = {
             organization: 'FreeCodeCamp',
             years: '2022',
             program: 'Scientific Computing with Python & JavaScript Algorithms and Data Structure & Data Analysis with Python',
-            descriptions: ['']
+            descriptions: []
         },
         {
             organization: 'British Columbia Institute of Technology',
@@ -232,11 +232,16 @@ const Resume = () => {
                                     return (
                                         <div className='experience-box' key={ idx }>
                                             { linkURL ? 
-                                                <h3 className='subtitle-txt'><GrPersonalComputer className='sub-icon'/>
-                                                <a className='subtitle-link' href={ linkURL } target='_blank' rel="noopener noreferrer">{ title } - { company } <BsCheck2Circle/></a> 
-                                                <span className='period-box'><BsCalendar4Range className='sub-icon'/>{ period }</span></h3> 
+                                                <div className='subtitle-txt'>
+                                                    <div>
+                                                    <GrPersonalComputer className='sub-icon'/>
+                                                    <a className='subtitle-link' href={ linkURL } target='_blank' rel="noopener noreferrer">{ title } - { company } <BsCheck2Circle/></a></div> 
+                                                    <span className='period-box'><BsCalendar4Range className='sub-icon'/>{ period }</span>
+                                                </div> 
                                                 : 
-                                                <h3 className='subtitle-txt'><GrPersonalComputer className='sub-icon'/>{ title } - { company } <span className='period-box'><BsCalendar4Range className='sub-icon'/>{ period }</span></h3> 
+                                                <div className='subtitle-txt'><div><GrPersonalComputer className='sub-icon'/>
+                                                { title } - { company } </div>
+                                                <span className='period-box'><BsCalendar4Range className='sub-icon'/>{ period }</span></div> 
                                             }
                                             { descriptions.map((desc, idx) => {
                                                 return <p key={ idx }><BsDot /> { desc }</p>
@@ -255,15 +260,17 @@ const Resume = () => {
                                             {
                                                 linkURL ? 
                                                 <a className='subtitle-link' href={ linkURL } target='_blank' rel="noopener noreferrer">
-                                                    <h3 className='subtitle-txt'><GrCertificate className='sub-icon' />{ organization } - { years } <BsCheck2Circle/></h3>
+                                                    <div className='subtitle-txt'>
+                                                        <GrCertificate className='sub-icon' />{ organization } - { years } <BsCheck2Circle/>
+                                                    </div>
                                                 </a>
                                                 :
-                                                <h3 className='subtitle-txt'><GrCertificate className='sub-icon' />{ organization } - { years }</h3>
+                                                <div className='subtitle-txt'><GrCertificate className='sub-icon' />{ organization } - { years }</div>
                                             }
                                             <p className='program-title-txt'>{ program }</p>
                                             { descriptions !== '' ? descriptions.map((desc, idx) => {
                                                 return (
-                                                    <p key={idx}>{ desc }</p>
+                                                    <p key={idx}><BsDot /> { desc }</p>
                                                 )
                                             }) : ''}
                                         </div>
